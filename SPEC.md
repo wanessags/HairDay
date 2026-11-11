@@ -645,7 +645,37 @@ Validação:
 - Compilação TypeScript.
 - Build de produção.
 
+### Etapa 07.2 — Estilização do AppointmentForm
+
+**Status:** Implementado; aguardando validação e commit.
+
+**Arquivo:**
+
+- `src/components/AppointmentForm/AppointmentForm.css`
+
+Atividades:
+
+- Estilização dos campos de data e cliente.
+- Criação do grid de seleção de horários.
+- Estilização dos estados normal, hover e selecionado.
+- Estilização do botão Agendar.
+- Estilização das mensagens de erro e sucesso.
+- Adaptação dos horários para telas pequenas.
+- Inclusão de foco visível e suporte a movimento reduzido.
+
+Observações:
+
+- CSS ainda precisa ser importado no AppointmentForm.tsx.
+- Formulário ainda não está integrado à Sidebar.
+- Fidelidade visual ao Figma não validada.
+- Testes funcionais ainda pendentes.
+
+Validação:
+
+- Build de produção.
+- Verificação de formatação do Git.
+
 ### Próxima etapa
 
-Implementar AppointmentForm.css com os estilos
-do formulário e dos botões de horários.
+Importar AppointmentForm.css no componente
+AppointmentForm.tsx.
