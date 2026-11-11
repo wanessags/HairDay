@@ -295,3 +295,45 @@ Atividades:
 
 Implementar os tipos TypeScript e as constantes
 de horários, mantendo a documentação atualizada.
+
+### Etapa 02 — Tipos TypeScript
+
+**Status:** Implementado; aguardando validação e commit.
+
+Atividades:
+
+- Criação do tipo Appointment.
+- Definição dos períodos morning, afternoon e evening.
+- Criação do tipo AppointmentFormData.
+- Criação do agrupamento AppointmentsByPeriod.
+
+Validação:
+
+- Compilação TypeScript com `npx tsc -b`.
+
+### Próxima etapa
+
+Implementar as constantes de horários e períodos.
+
+### Etapa 03 — Horários e períodos
+
+**Status:** Implementado; aguardando validação e commit.
+
+**Arquivo:** `src/constants/schedule.ts`
+
+Atividades:
+
+- Definição dos períodos Manhã, Tarde e Noite.
+- Configuração dos 13 horários.
+- Criação do tipo SchedulePeriod.
+- Criação da constante AVAILABLE_TIMES.
+- Utilização de flatMap() para reunir os horários.
+
+Validação:
+
+- Compilação TypeScript com `npx tsc -b`.
+
+### Próxima etapa
+
+Implementar as funções utilitárias para filtrar,
+ordenar e agrupar os agendamentos.
