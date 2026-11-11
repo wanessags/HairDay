@@ -580,7 +580,39 @@ Validação:
 - Build de produção.
 - Verificação visual em desktop e mobile.
 
+### Etapa 06.6 — Estilos globais
+
+**Status:** Implementado; aguardando validação e commit.
+
+**Arquivo:**
+
+- `src/index.css`
+
+Atividades:
+
+- Substituição dos estilos globais iniciais do Vite.
+- Configuração de cores e variáveis CSS.
+- Definição da tipografia global.
+- Padronização de box-sizing.
+- Normalização de botões e campos de formulário.
+- Inclusão de foco visível para navegação por teclado.
+- Respeito à preferência por movimento reduzido.
+- Configuração de estilos de seleção de texto.
+
+Observações:
+
+- A identidade visual ainda precisa ser comparada
+  com o protótipo oficial do Figma.
+- Os componentes de formulário estão pendentes.
+- Os testes de acessibilidade ainda não foram executados.
+
+Validação:
+
+- Compilação TypeScript.
+- Build de produção.
+- Verificação visual desktop e mobile.
+
 ### Próxima etapa
 
-Revisar os estilos globais no index.css
-para remover os padrões iniciais do Vite.
+Implementar o componente AppointmentForm
+para cadastro de agendamentos.
