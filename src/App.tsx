@@ -1,11 +1,14 @@
 import { ScheduleSidebar } from "./components/ScheduleSidebar/ScheduleSidebar";
+import { AppointmentForm } from "./components/AppointmentForm/AppointmentForm";
 
 import "./App.css";
 
 function App() {
   return (
     <div className="app">
-      <ScheduleSidebar />
+      <ScheduleSidebar>
+        <AppointmentForm />
+      </ScheduleSidebar>
 
       <main className="app__main">
         <header className="app__header">

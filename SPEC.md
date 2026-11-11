@@ -703,6 +703,31 @@ Validação:
 - Compilação TypeScript.
 - Build de produção.
 
+### Etapa 07.4 — Integração do formulário à Sidebar
+
+**Status:** Implementado; aguardando validação.
+
+**Arquivo:** `src/App.tsx`
+
+Atividades:
+
+- Integração do AppointmentForm à ScheduleSidebar.
+- Preservação do layout principal.
+- Disponibilização do formulário na interface.
+- Utilização do AppointmentProvider já configurado.
+
+Observações:
+
+- A listagem dos agendamentos ainda será implementada.
+- A fidelidade visual ao Figma ainda precisa ser validada.
+- Os testes funcionais completos continuam pendentes.
+
+Validação:
+
+- Compilação TypeScript.
+- Build de produção.
+- Teste visual e manual do formulário.
+
 ### Próxima etapa
 
-Integrar o AppointmentForm à Sidebar no App.tsx.
+Implementar o filtro de data da agenda.
