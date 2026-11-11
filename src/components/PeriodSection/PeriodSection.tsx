@@ -1,3 +1,5 @@
+import { CloudSun, MoonStar, Sunrise } from "lucide-react";
+
 import { AppointmentItem } from "../AppointmentItem/AppointmentItem";
 
 import type { Appointment, Period } from "../../types/appointment";
@@ -15,6 +17,12 @@ type PeriodSectionProps = {
 const EMPTY_MESSAGE =
   "Você ainda não tem agendamentos cadastrados nesse período.";
 
+const PERIOD_ICONS = {
+  morning: Sunrise,
+  afternoon: CloudSun,
+  evening: MoonStar,
+};
+
 export function PeriodSection({
   period,
   title,
@@ -22,6 +30,8 @@ export function PeriodSection({
   appointments,
   onDelete,
 }: PeriodSectionProps) {
+  const PeriodIcon = PERIOD_ICONS[period];
+
   const sortedAppointments = [...appointments].sort((a, b) =>
     a.time.localeCompare(b.time),
   );
@@ -33,9 +43,24 @@ export function PeriodSection({
     >
       <header className="period-section__header">
         <div className="period-section__heading">
-          <h3 id={`period-${period}-title`} className="period-section__title">
-            {title}
-          </h3>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "10px",
+            }}
+          >
+            <PeriodIcon
+              size={18}
+              strokeWidth={1.8}
+              color="var(--color-primary)"
+              aria-hidden="true"
+            />
+
+            <h3 id={`period-${period}-title`} className="period-section__title">
+              {title}
+            </h3>
+          </div>
 
           <span className="period-section__range">{range}</span>
         </div>

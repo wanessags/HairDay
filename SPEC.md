@@ -1273,7 +1273,37 @@ Validação:
 - Build de produção.
 - Verificação visual dos três cards.
 
+### Etapa 11.6 — Ícones dos períodos
+
+**Status:** Implementado; aguardando validação.
+
+**Arquivo:**
+
+- `src/components/PeriodSection/PeriodSection.tsx`
+
+Atividades:
+
+- Integração da biblioteca lucide-react.
+- Adição do ícone Sunrise para Manhã.
+- Adição do ícone CloudSun para Tarde.
+- Adição do ícone MoonStar para Noite.
+- Aplicação da cor dourada da identidade visual.
+- Preservação da ordenação e exclusão.
+- Manutenção da acessibilidade dos componentes.
+
+Observações:
+
+- Os ícones são decorativos.
+- A fidelidade visual ainda precisa ser conferida.
+- Outros ícones da interface serão adicionados posteriormente.
+
+Validação:
+
+- Compilação TypeScript.
+- Build de produção.
+- Verificação visual dos ícones.
+
 ### Próxima etapa
 
-Revisar os demais arquivos CSS e ajustar
-a interface para maior fidelidade ao Figma.
+Ajustar os ícones de calendário, cliente
+e lixeira para acompanhar o Figma.
