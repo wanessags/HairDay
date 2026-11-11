@@ -755,7 +755,34 @@ Validação:
 - Compilação TypeScript.
 - Build de produção.
 
+### Etapa 08.2 — Estilização do DateFilter
+
+**Status:** Implementado; aguardando validação e commit.
+
+**Arquivo:**
+
+- `src/components/DateFilter/DateFilter.css`
+
+Atividades:
+
+- Estilização do seletor de data.
+- Definição de cores, bordas e espaçamentos.
+- Configuração de estados hover e focus-visible.
+- Adaptação para dispositivos móveis.
+- Suporte à preferência por movimento reduzido.
+
+Observações:
+
+- CSS ainda precisa ser importado no DateFilter.tsx.
+- DateFilter ainda não está integrado ao App.tsx.
+- A filtragem da listagem ainda será implementada.
+- Fidelidade visual ao Figma não validada.
+
+Validação:
+
+- Compilação TypeScript.
+- Build de produção.
+
 ### Próxima etapa
 
-Implementar DateFilter.css para estilizar
-o seletor de data da agenda.
+Importar DateFilter.css no componente DateFilter.tsx.

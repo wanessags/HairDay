@@ -1,0 +1,72 @@
+/* ========================================
+   HairDay — Filtro de data
+======================================== */
+
+.date-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-width: 240px;
+}
+
+.date-filter__label {
+  color: #b2b2bd;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.date-filter__input {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 14px;
+  border: 1px solid #41424b;
+  border-radius: 8px;
+  background-color: #23242c;
+  color: #ffffff;
+  color-scheme: dark;
+  font-size: 14px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.date-filter__input:hover {
+  border-color: #777886;
+}
+
+.date-filter__input:focus-visible {
+  border-color: #b7a5f9;
+  outline: 2px solid #b7a5f9;
+  outline-offset: 2px;
+}
+
+.date-filter__input::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.date-filter__input::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
+/* ========================================
+   Responsividade
+======================================== */
+
+@media (max-width: 600px) {
+  .date-filter {
+    max-width: 100%;
+  }
+
+  .date-filter__input {
+    min-height: 48px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .date-filter__input {
+    transition: none;
+  }
+}
