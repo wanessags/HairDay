@@ -3,6 +3,8 @@ import { useState, type FormEvent } from "react";
 import { useAppointments } from "../../hooks/useAppointments";
 import { SCHEDULE_PERIODS } from "../../constants/schedule";
 
+import "./AppointmentForm.css";
+
 type FormErrors = {
   clientName?: string;
   date?: string;

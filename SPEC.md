@@ -675,7 +675,34 @@ Validação:
 - Build de produção.
 - Verificação de formatação do Git.
 
+### Etapa 07.3 — Integração do CSS do formulário
+
+**Status:** Implementado; aguardando validação e commit.
+
+**Arquivo:**
+
+- `src/components/AppointmentForm/AppointmentForm.tsx`
+
+Atividades:
+
+- Importação do AppointmentForm.css.
+- Integração dos estilos ao formulário.
+- Preservação das validações dos campos.
+- Preservação da seleção de horários.
+- Preservação da integração com Context API.
+- Preservação das mensagens de erro e sucesso.
+
+Observações:
+
+- O formulário ainda não está integrado à Sidebar.
+- Os testes funcionais ainda não foram executados.
+- A fidelidade visual ao Figma ainda precisa ser validada.
+
+Validação:
+
+- Compilação TypeScript.
+- Build de produção.
+
 ### Próxima etapa
 
-Importar AppointmentForm.css no componente
-AppointmentForm.tsx.
+Integrar o AppointmentForm à Sidebar no App.tsx.
