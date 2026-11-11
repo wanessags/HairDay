@@ -388,6 +388,29 @@ Validação:
 
 - Compilação TypeScript.
 
+### Etapa 05.2 — Hook useAppointments
+
+**Status:** Implementado; aguardando validação.
+
+**Arquivo:** `src/hooks/useAppointments.ts`
+
+Atividades:
+
+- Criação do Hook personalizado useAppointments.
+- Integração com AppointmentContext.
+- Utilização do Hook useContext.
+- Retorno tipado com AppointmentContextData.
+- Tratamento de erro quando utilizado fora do Provider.
+
+Validação:
+
+- Compilação TypeScript com npx tsc -b.
+
+Observações:
+
+- O AppointmentProvider ainda precisa ser integrado ao main.tsx.
+- O Hook será utilizado pelos componentes do HairDay.
+
 ### Próxima etapa
 
-Criar o Hook personalizado useAppointments.ts.
+Integrar o AppointmentProvider ao arquivo main.tsx.
