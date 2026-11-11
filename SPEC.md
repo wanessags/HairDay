@@ -411,6 +411,31 @@ Observações:
 - O AppointmentProvider ainda precisa ser integrado ao main.tsx.
 - O Hook será utilizado pelos componentes do HairDay.
 
+### Etapa 05.3 — Integração do AppointmentProvider
+
+**Status:** Implementado; aguardando validação e commit.
+
+**Arquivo:** `src/main.tsx`
+
+Atividades:
+
+- Importação do AppointmentProvider.
+- Integração do Provider à raiz da aplicação.
+- Preservação do React StrictMode.
+- Disponibilização do contexto para os componentes filhos.
+
+Validação:
+
+- Compilação TypeScript.
+- Build de produção.
+
+Observações:
+
+- O gerenciamento de agendamentos está preparado.
+- Os componentes visuais ainda serão implementados.
+- Os testes funcionais serão realizados após a integração da interface.
+
 ### Próxima etapa
 
-Integrar o AppointmentProvider ao arquivo main.tsx.
+Iniciar a implementação da interface visual do HairDay,
+seguindo o protótipo oficial do Figma.
