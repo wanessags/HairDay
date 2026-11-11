@@ -5,6 +5,8 @@ import { SCHEDULE_PERIODS } from "../../constants/schedule";
 import { getAppointmentsForDate } from "../../utils/appointmentUtils";
 import { PeriodSection } from "../PeriodSection/PeriodSection";
 
+import "./AppointmentList.css";
+
 export function AppointmentList() {
   const { appointments, selectedDate, removeAppointment } = useAppointments();
 

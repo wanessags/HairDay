@@ -1054,7 +1054,36 @@ Validação:
 - Build de produção.
 - Verificação de formatação do Git.
 
+### Etapa 09.9 — Integração do CSS do AppointmentList
+
+**Status:** Implementado; aguardando validação e commit.
+
+**Arquivo:**
+
+- `src/components/AppointmentList/AppointmentList.tsx`
+
+Atividades:
+
+- Importação do AppointmentList.css.
+- Integração dos estilos à listagem.
+- Preservação do Context API e do Hook useAppointments.
+- Preservação da filtragem por data.
+- Preservação do agrupamento por períodos.
+- Preservação do cálculo de total com reduce().
+- Preservação do callback de exclusão.
+
+Observações:
+
+- A listagem ainda precisa ser integrada ao App.tsx.
+- Os testes funcionais completos ainda estão pendentes.
+- A fidelidade visual ao Figma ainda não foi validada.
+
+Validação:
+
+- Compilação TypeScript.
+- Build de produção.
+
 ### Próxima etapa
 
-Importar AppointmentList.css no componente
-AppointmentList.tsx.
+Integrar o AppointmentList ao App.tsx
+e testar cadastro, filtro por data e exclusão.
