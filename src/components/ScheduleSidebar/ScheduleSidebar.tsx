@@ -1,5 +1,7 @@
 import type { ReactNode } from "react";
 
+import "./ScheduleSidebar.css";
+
 type ScheduleSidebarProps = {
   children?: ReactNode;
 };

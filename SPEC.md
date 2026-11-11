@@ -492,7 +492,33 @@ Validação:
 - Build de produção.
 - Verificação de formatação do Git.
 
+### Etapa 06.3 — Integração do CSS da Sidebar
+
+**Status:** Implementado; aguardando validação e commit.
+
+**Arquivo:**
+
+- `src/components/ScheduleSidebar/ScheduleSidebar.tsx`
+
+Atividades:
+
+- Importação do ScheduleSidebar.css.
+- Integração dos estilos ao componente.
+- Preservação das Props tipadas com ReactNode.
+- Preservação da estrutura semântica e acessível.
+
+Validação:
+
+- Compilação TypeScript.
+- Build de produção.
+
+Observações:
+
+- A Sidebar ainda não está integrada ao App.tsx.
+- A interface ainda precisa ser comparada ao Figma.
+- A responsividade visual ainda precisa ser testada.
+
 ### Próxima etapa
 
-Importar o CSS no componente ScheduleSidebar.tsx
-e preparar sua integração visual.
+Integrar o ScheduleSidebar ao App.tsx para
+visualizar o componente na aplicação.
