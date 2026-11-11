@@ -728,6 +728,34 @@ Validação:
 - Build de produção.
 - Teste visual e manual do formulário.
 
+### Etapa 08.1 — Componente DateFilter
+
+**Status:** Implementado; aguardando validação e commit.
+
+**Arquivo:** `src/components/DateFilter/DateFilter.tsx`
+
+Atividades:
+
+- Criação do componente DateFilter.
+- Integração com o Hook useAppointments.
+- Utilização do Context API.
+- Controle da data selecionada.
+- Criação de Props tipadas.
+- Utilização de useId para identificação acessível.
+- Atualização do estado por meio do evento onChange.
+
+Observações:
+
+- O componente ainda não foi integrado ao App.tsx.
+- O CSS será implementado na próxima etapa.
+- A filtragem visual será conectada à listagem posteriormente.
+
+Validação:
+
+- Compilação TypeScript.
+- Build de produção.
+
 ### Próxima etapa
 
-Implementar o filtro de data da agenda.
+Implementar DateFilter.css para estilizar
+o seletor de data da agenda.
