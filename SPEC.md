@@ -463,6 +463,36 @@ Validação:
 - Compilação TypeScript.
 - Build de produção.
 
+### Etapa 06.2 — Estilização da ScheduleSidebar
+
+**Status:** Implementado; aguardando validação.
+
+**Arquivo:**
+
+- `src/components/ScheduleSidebar/ScheduleSidebar.css`
+
+Atividades:
+
+- Criação dos estilos da Sidebar.
+- Definição de fundo escuro e tipografia.
+- Configuração de espaçamentos internos.
+- Definição de largura para desktop.
+- Adaptação responsiva para tablet e mobile.
+- Preparação visual para o formulário.
+
+Observações:
+
+- CSS ainda não importado pelo componente.
+- Sidebar ainda não integrada ao App.tsx.
+- Cores e proporções ainda precisam ser conferidas no Figma.
+- Responsividade visual ainda não testada no navegador.
+
+Validação:
+
+- Build de produção.
+- Verificação de formatação do Git.
+
 ### Próxima etapa
 
-Implementar o CSS do componente ScheduleSidebar.
+Importar o CSS no componente ScheduleSidebar.tsx
+e preparar sua integração visual.
