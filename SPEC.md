@@ -435,7 +435,34 @@ Observações:
 - Os componentes visuais ainda serão implementados.
 - Os testes funcionais serão realizados após a integração da interface.
 
+### Etapa 06.1 — Estrutura do ScheduleSidebar
+
+**Status:** Implementado; aguardando validação.
+
+**Arquivo:**
+
+- `src/components/ScheduleSidebar/ScheduleSidebar.tsx`
+
+Atividades:
+
+- Criação do componente ScheduleSidebar.
+- Definição de Props tipadas com ReactNode.
+- Utilização de elementos semânticos.
+- Inclusão de título e descrição.
+- Preparação para receber o AppointmentForm.
+- Inclusão de identificação acessível com aria-label.
+
+Observações:
+
+- Estilização CSS pendente.
+- Integração ao App.tsx pendente.
+- Fidelidade visual ao Figma ainda não validada.
+
+Validação:
+
+- Compilação TypeScript.
+- Build de produção.
+
 ### Próxima etapa
 
-Iniciar a implementação da interface visual do HairDay,
-seguindo o protótipo oficial do Figma.
+Implementar o CSS do componente ScheduleSidebar.
