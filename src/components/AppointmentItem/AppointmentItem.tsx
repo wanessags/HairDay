@@ -1,5 +1,7 @@
 import type { Appointment } from "../../types/appointment";
 
+import "./AppointmentItem.css";
+
 type AppointmentItemProps = {
   appointment: Appointment;
   onDelete: (id: string) => void;

@@ -902,7 +902,35 @@ Validação:
 - Build de produção.
 - Verificação de formatação do Git.
 
+### Etapa 09.3 — Integração do CSS do AppointmentItem
+
+**Status:** Implementado; aguardando validação e commit.
+
+**Arquivo:**
+
+- `src/components/AppointmentItem/AppointmentItem.tsx`
+
+Atividades:
+
+- Importação do AppointmentItem.css.
+- Integração dos estilos ao componente.
+- Preservação das Props tipadas.
+- Preservação da exibição de horário e cliente.
+- Preservação do callback onDelete.
+- Manutenção dos atributos de acessibilidade.
+
+Observações:
+
+- O componente ainda precisa ser integrado à listagem.
+- A exclusão ainda não foi testada na interface.
+- A fidelidade visual ao Figma ainda não foi validada.
+
+Validação:
+
+- Compilação TypeScript.
+- Build de produção.
+
 ### Próxima etapa
 
-Importar AppointmentItem.css no componente
-AppointmentItem.tsx.
+Criar o componente PeriodSection.tsx para
+organizar os agendamentos por manhã, tarde e noite.
