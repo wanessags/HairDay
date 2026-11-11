@@ -870,7 +870,39 @@ Validação:
 - Build de produção.
 - Verificação de formatação do Git.
 
+### Etapa 09.2 — Estilização do AppointmentItem
+
+**Status:** Implementado; aguardando validação e commit.
+
+**Arquivo:**
+
+- `src/components/AppointmentItem/AppointmentItem.css`
+
+Atividades:
+
+- Estilização das linhas de agendamento.
+- Destaque visual para os horários.
+- Estilização do nome do cliente.
+- Estilização do botão de exclusão.
+- Inclusão de estados hover, focus-visible e active.
+- Adaptação para dispositivos móveis.
+- Configuração de área de clique de 44 × 44 pixels.
+- Suporte à preferência por movimento reduzido.
+
+Observações:
+
+- O CSS ainda precisa ser importado no AppointmentItem.tsx.
+- O componente ainda não está integrado à listagem.
+- A exclusão funcional ainda precisa ser testada.
+- A fidelidade visual ao Figma ainda não foi validada.
+
+Validação:
+
+- Compilação TypeScript.
+- Build de produção.
+- Verificação de formatação do Git.
+
 ### Próxima etapa
 
-Implementar AppointmentItem.css para estilizar
-as linhas da agenda e o botão de exclusão.
+Importar AppointmentItem.css no componente
+AppointmentItem.tsx.

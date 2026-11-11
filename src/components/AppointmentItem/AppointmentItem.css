@@ -1,0 +1,108 @@
+/* ========================================
+   HairDay — Item de agendamento
+======================================== */
+
+.appointment-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  min-width: 0;
+  padding: 16px 12px;
+  border-bottom: 1px solid #35363e;
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.appointment-item:last-child {
+  border-bottom: none;
+}
+
+/* Horário do atendimento */
+
+.appointment-item__time {
+  flex-shrink: 0;
+  min-width: 52px;
+  color: #f5f5f7;
+  font-size: 14px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.5;
+}
+
+/* Nome do cliente */
+
+.appointment-item__client {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  color: #b2b2bd;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Botão de exclusão */
+
+.appointment-item__delete {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background-color: transparent;
+  color: #9899a6;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.appointment-item__delete:hover {
+  color: #ffa1aa;
+  background-color: rgba(241, 140, 149, 0.1);
+}
+
+.appointment-item__delete:focus-visible {
+  outline: 2px solid #b7a5f9;
+  outline-offset: 2px;
+}
+
+.appointment-item__delete:active {
+  background-color: rgba(241, 140, 149, 0.18);
+}
+
+/* ========================================
+   Responsividade
+======================================== */
+
+@media (max-width: 480px) {
+  .appointment-item {
+    gap: 12px;
+    padding: 12px 4px;
+  }
+
+  .appointment-item__time {
+    min-width: 48px;
+    font-size: 13px;
+  }
+
+  .appointment-item__client {
+    font-size: 13px;
+  }
+}
+
+/* ========================================
+   Acessibilidade
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .appointment-item__delete {
+    transition: none;
+  }
+}
