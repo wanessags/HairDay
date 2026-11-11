@@ -18,21 +18,22 @@
 .appointment-form__label {
   display: block;
   margin: 0;
-  color: #f5f5f7;
+  color: var(--color-text);
   font-size: 14px;
   font-weight: 600;
   line-height: 1.5;
 }
 
+/* Campos */
+
 .appointment-form__input {
   width: 100%;
-  min-height: 48px;
-  padding: 12px 14px;
-  border: 1px solid #41424b;
+  min-height: 44px;
+  padding: 10px 14px;
+  border: 1px solid var(--color-border);
   border-radius: 8px;
-  outline: none;
-  background-color: #191a20;
-  color: #ffffff;
+  background-color: #211f24;
+  color: var(--color-text);
   font-size: 14px;
   color-scheme: dark;
   transition:
@@ -41,20 +42,21 @@
 }
 
 .appointment-form__input::placeholder {
-  color: #92939f;
+  color: var(--color-text-muted);
 }
 
 .appointment-form__input:hover {
-  border-color: #6d6e7c;
+  border-color: var(--color-border-hover);
 }
 
 .appointment-form__input:focus-visible {
-  border-color: #b7a5f9;
-  box-shadow: 0 0 0 3px rgba(183, 165, 249, 0.15);
+  border-color: var(--color-primary);
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }
 
 .appointment-form__input[aria-invalid="true"] {
-  border-color: #f18c95;
+  border-color: var(--color-error);
 }
 
 /* ========================================
@@ -64,7 +66,7 @@
 .appointment-form__times {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
   min-width: 0;
   margin: 0;
   padding: 0;
@@ -72,21 +74,21 @@
 }
 
 .appointment-form__times > legend {
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   padding: 0;
 }
 
 .appointment-form__period {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
 .appointment-form__period-title {
   margin: 0;
-  color: #b2b2bd;
+  color: var(--color-text-muted);
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .appointment-form__time-grid {
@@ -99,14 +101,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 44px;
-  padding: 10px 4px;
-  border: 1px solid #41424b;
-  border-radius: 8px;
-  background-color: #191a20;
-  color: #b2b2bd;
-  font-size: 13px;
+  min-height: 40px;
+  padding: 8px 4px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background-color: #211f24;
+  color: var(--color-text-secondary);
+  font-size: 12px;
   font-weight: 500;
+  font-variant-numeric: tabular-nums;
   transition:
     background-color 0.2s ease,
     border-color 0.2s ease,
@@ -114,25 +117,30 @@
 }
 
 .appointment-form__time:hover {
-  border-color: #b7a5f9;
-  color: #ffffff;
+  border-color: var(--color-primary);
+  color: var(--color-text);
+}
+
+.appointment-form__time:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }
 
 .appointment-form__time--selected,
 .appointment-form__time[aria-pressed="true"] {
-  border-color: #b7a5f9;
-  background-color: #b7a5f9;
-  color: #17181c;
+  border-color: var(--color-primary);
+  background-color: rgba(184, 149, 46, 0.12);
+  color: #e6bc44;
   font-weight: 700;
 }
 
 .appointment-form__time--selected:hover {
-  color: #17181c;
-  background-color: #c7b9ff;
+  background-color: rgba(184, 149, 46, 0.2);
+  color: #f1ca5b;
 }
 
 /* ========================================
-   Botão de agendar
+   Botão Agendar
 ======================================== */
 
 .appointment-form__submit {
@@ -140,20 +148,26 @@
   min-height: 48px;
   padding: 14px 20px;
   border: 0;
-  border-radius: 8px;
-  background-color: #b7a5f9;
-  color: #17181c;
+  border-radius: 7px;
+  background-color: var(--color-primary);
+  color: #19181b;
   font-size: 14px;
   font-weight: 700;
+  text-transform: uppercase;
   transition: background-color 0.2s ease;
 }
 
 .appointment-form__submit:hover {
-  background-color: #c7b9ff;
+  background-color: var(--color-primary-hover);
 }
 
 .appointment-form__submit:active {
-  background-color: #a28def;
+  background-color: var(--color-primary-active);
+}
+
+.appointment-form__submit:focus-visible {
+  outline: 2px solid #f5d36b;
+  outline-offset: 3px;
 }
 
 /* ========================================
@@ -162,7 +176,7 @@
 
 .appointment-form__error {
   display: block;
-  color: #ffa1aa;
+  color: var(--color-error);
   font-size: 12px;
   line-height: 1.5;
 }
@@ -173,7 +187,7 @@
   border: 1px solid #417d63;
   border-radius: 8px;
   background-color: #1d3b30;
-  color: #a7f3cf;
+  color: var(--color-success);
   font-size: 13px;
   line-height: 1.5;
 }

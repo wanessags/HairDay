@@ -1151,7 +1151,40 @@ Validação:
 - Build de produção.
 - Verificação visual da aplicação.
 
+### Etapa 11.2 — Ajustes visuais do formulário
+
+**Status:** Implementado; aguardando validação.
+
+**Arquivo:**
+
+- `src/components/AppointmentForm/AppointmentForm.css`
+
+Atividades:
+
+- Substituição dos detalhes roxos por dourado.
+- Aplicação das variáveis CSS globais.
+- Ajuste das cores e bordas dos campos.
+- Refinamento dos botões de horários.
+- Destaque dourado para o horário selecionado.
+- Estilização dourada do botão AGENDAR.
+- Ajuste de espaçamentos e tipografia.
+- Preservação dos estados de foco e acessibilidade.
+- Manutenção da responsividade.
+
+Observações:
+
+- Nenhuma funcionalidade foi removida.
+- As cores são aproximações visuais do Figma.
+- Ainda precisamos ajustar os demais componentes.
+- A comparação visual final permanece pendente.
+
+Validação:
+
+- Compilação TypeScript.
+- Build de produção.
+- Verificação visual do formulário.
+
 ### Próxima etapa
 
-Atualizar AppointmentForm.css para aplicar
-os estilos dourados aos campos e botões.
+Ajustar a ScheduleSidebar para aproximar
+as dimensões, cores e espaçamentos do Figma.
