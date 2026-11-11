@@ -518,7 +518,37 @@ Observações:
 - A interface ainda precisa ser comparada ao Figma.
 - A responsividade visual ainda precisa ser testada.
 
+### Etapa 06.4 — Integração da Sidebar ao App
+
+**Status:** Implementado; aguardando validação.
+
+**Arquivo:**
+
+- `src/App.tsx`
+
+Atividades:
+
+- Importação do componente ScheduleSidebar.
+- Criação da estrutura principal da aplicação.
+- Inclusão do título "Sua agenda".
+- Criação da área reservada aos agendamentos.
+- Utilização de elementos semânticos e aria-label.
+- Preservação da importação do App.css.
+
+Observações:
+
+- O formulário ainda será implementado.
+- A listagem ainda será implementada.
+- Os estilos do layout principal ainda precisam ser criados.
+- Fidelidade ao Figma ainda não validada.
+
+Validação:
+
+- Compilação TypeScript.
+- Build de produção.
+- Verificação visual no navegador.
+
 ### Próxima etapa
 
-Integrar o ScheduleSidebar ao App.tsx para
-visualizar o componente na aplicação.
+Implementar o layout principal no App.css,
+organizando a Sidebar e a agenda.
