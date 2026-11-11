@@ -1,0 +1,68 @@
+/* ========================================
+   HairDay — Listagem de agendamentos
+======================================== */
+
+.appointment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  min-width: 0;
+}
+
+/* Resumo dos agendamentos */
+
+.appointment-list__summary {
+  margin: 0;
+  padding: 12px 16px;
+  border: 1px solid #35363e;
+  border-radius: 8px;
+  background-color: #23242c;
+  color: #b2b2bd;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Organização dos períodos */
+
+.appointment-list__periods {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  min-width: 0;
+}
+
+/* ========================================
+   Responsividade — Tablet
+======================================== */
+
+@media (max-width: 1023px) {
+  .appointment-list {
+    gap: 20px;
+  }
+
+  .appointment-list__periods {
+    gap: 20px;
+  }
+}
+
+/* ========================================
+   Responsividade — Mobile
+======================================== */
+
+@media (max-width: 480px) {
+  .appointment-list {
+    gap: 16px;
+  }
+
+  .appointment-list__summary {
+    padding: 12px;
+    font-size: 12px;
+  }
+
+  .appointment-list__periods {
+    gap: 16px;
+  }
+}

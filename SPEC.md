@@ -1025,7 +1025,36 @@ Validação:
 - Compilação TypeScript.
 - Build de produção.
 
+### Etapa 09.8 — Estilização do AppointmentList
+
+**Status:** Implementado; aguardando validação e commit.
+
+**Arquivo:**
+
+- `src/components/AppointmentList/AppointmentList.css`
+
+Atividades:
+
+- Estilização da listagem de agendamentos.
+- Criação dos estilos do resumo da agenda.
+- Organização visual dos períodos.
+- Definição de espaçamentos e cores.
+- Implementação de responsividade para tablet e mobile.
+
+Observações:
+
+- CSS ainda precisa ser importado no AppointmentList.tsx.
+- A listagem ainda não está integrada ao App.tsx.
+- A fidelidade visual ao Figma ainda não foi validada.
+- Os testes funcionais continuam pendentes.
+
+Validação:
+
+- Compilação TypeScript.
+- Build de produção.
+- Verificação de formatação do Git.
+
 ### Próxima etapa
 
-Implementar AppointmentList.css para estilizar
-a listagem e o resumo dos agendamentos.
+Importar AppointmentList.css no componente
+AppointmentList.tsx.
