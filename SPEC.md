@@ -548,7 +548,39 @@ Validação:
 - Build de produção.
 - Verificação visual no navegador.
 
+### Etapa 06.5 — Layout principal responsivo
+
+**Status:** Implementado; aguardando validação.
+
+**Arquivo:**
+
+- `src/App.css`
+
+Atividades:
+
+- Estilização do layout principal.
+- Organização da Sidebar e agenda com Flexbox.
+- Definição de cores e tipografia iniciais.
+- Estilização do cabeçalho da agenda.
+- Estilização da mensagem provisória.
+- Implementação de media queries.
+- Adaptação para desktop, tablet e mobile.
+
+Observações:
+
+- As cores e medidas ainda precisam ser
+  comparadas com o Figma.
+- O formulário de agendamento está pendente.
+- A listagem dos agendamentos está pendente.
+- A responsividade visual precisa ser testada.
+
+Validação:
+
+- Compilação TypeScript.
+- Build de produção.
+- Verificação visual em desktop e mobile.
+
 ### Próxima etapa
 
-Implementar o layout principal no App.css,
-organizando a Sidebar e a agenda.
+Revisar os estilos globais no index.css
+para remover os padrões iniciais do Vite.

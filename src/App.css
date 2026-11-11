@@ -1,42 +1,139 @@
+/* ========================================
+   HairDay — Layout principal
+======================================== */
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.app {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #17181c;
+  color: #ffffff;
+}
+
+/* ========================================
+   Área principal da agenda
+======================================== */
+
+.app__main {
+  flex: 1;
+  min-width: 0;
+  min-height: 100vh;
+  padding: 72px 64px;
+  background-color: #17181c;
+}
+
+.app__header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+
+.app__title {
+  margin: 0;
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+.app__description {
+  margin: 0;
+  color: #9899a6;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ========================================
+   Área dos agendamentos
+======================================== */
+
+.app__appointments {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.app__empty-message {
+  margin: 0;
+  padding: 32px 24px;
+  border: 1px solid #35363e;
+  border-radius: 12px;
+  color: #9899a6;
+  background-color: #23242c;
+  font-size: 14px;
+  line-height: 1.6;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
+/* ========================================
+   Desktop e notebooks
+======================================== */
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (max-width: 1200px) {
+  .app__main {
+    padding: 56px 40px;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+/* ========================================
+   Tablet
+======================================== */
+
+@media (max-width: 1023px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .app__main {
+    min-height: auto;
+    padding: 40px 24px;
+  }
+
+  .app__header {
+    margin-bottom: 32px;
+  }
+
+  .app__appointments {
+    max-width: 600px;
+    margin: 0 auto;
   }
 }
 
-.card {
-  padding: 2em;
-}
+/* ========================================
+   Celulares
+======================================== */
 
-.read-the-docs {
-  color: #888;
+@media (max-width: 480px) {
+  .app__main {
+    padding: 32px 20px;
+  }
+
+  .app__title {
+    font-size: 24px;
+  }
+
+  .app__description {
+    font-size: 14px;
+  }
+
+  .app__header {
+    margin-bottom: 24px;
+  }
+
+  .app__appointments {
+    gap: 24px;
+  }
+
+  .app__empty-message {
+    padding: 24px 16px;
+  }
 }
