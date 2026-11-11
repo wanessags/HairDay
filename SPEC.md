@@ -1215,7 +1215,37 @@ Validação:
 - Build de produção.
 - Verificação visual em desktop e mobile.
 
+### Etapa 11.4 — Ajuste do layout da agenda
+
+**Status:** Implementado; aguardando validação.
+
+**Arquivo:**
+
+- `src/App.css`
+
+Atividades:
+
+- Reorganização do cabeçalho com CSS Grid.
+- Posicionamento do seletor de data à direita no desktop.
+- Ajuste da largura e espaçamentos da agenda.
+- Aplicação das variáveis de identidade visual.
+- Adaptação do cabeçalho para dispositivos móveis.
+- Preservação da Sidebar e da listagem existentes.
+
+Observações:
+
+- A aparência do DateFilter será refinada posteriormente.
+- Os cards de períodos ainda precisam de ajustes visuais.
+- A fidelidade final ao Figma ainda está pendente.
+- Nenhuma funcionalidade foi removida.
+
+Validação:
+
+- Compilação TypeScript.
+- Build de produção.
+- Verificação visual desktop e mobile.
+
 ### Próxima etapa
 
-Ajustar o App.css para melhorar o alinhamento
-da agenda e o posicionamento do filtro de data.
+Ajustar DateFilter.css para aproximar o
+seletor de data da referência do Figma.
