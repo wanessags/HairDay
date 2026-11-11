@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from "react";
+import { CalendarDays, UserRound } from "lucide-react";
 
 import { useAppointments } from "../../hooks/useAppointments";
 import { SCHEDULE_PERIODS } from "../../constants/schedule";
@@ -79,24 +80,35 @@ export function AppointmentForm() {
           Data
         </label>
 
-        <input
-          id="appointment-date"
-          className="appointment-form__input"
-          type="date"
-          value={date}
-          min={getTodayDate()}
-          onChange={(event) => {
-            setDate(event.target.value);
-            setErrors((previous) => ({
-              ...previous,
-              date: undefined,
-            }));
-            setSuccessMessage("");
-          }}
-          aria-invalid={Boolean(errors.date)}
-          aria-describedby={errors.date ? "appointment-date-error" : undefined}
-          required
-        />
+        <div className="appointment-form__input-wrapper">
+          <CalendarDays
+            className="appointment-form__field-icon"
+            size={17}
+            strokeWidth={1.8}
+            aria-hidden="true"
+          />
+
+          <input
+            id="appointment-date"
+            className="appointment-form__input appointment-form__input--icon"
+            type="date"
+            value={date}
+            min={getTodayDate()}
+            onChange={(event) => {
+              setDate(event.target.value);
+              setErrors((previous) => ({
+                ...previous,
+                date: undefined,
+              }));
+              setSuccessMessage("");
+            }}
+            aria-invalid={Boolean(errors.date)}
+            aria-describedby={
+              errors.date ? "appointment-date-error" : undefined
+            }
+            required
+          />
+        </div>
 
         {errors.date && (
           <span
@@ -159,28 +171,37 @@ export function AppointmentForm() {
           Cliente
         </label>
 
-        <input
-          id="appointment-client"
-          className="appointment-form__input"
-          type="text"
-          value={clientName}
-          placeholder="Nome do cliente"
-          autoComplete="name"
-          maxLength={100}
-          onChange={(event) => {
-            setClientName(event.target.value);
-            setErrors((previous) => ({
-              ...previous,
-              clientName: undefined,
-            }));
-            setSuccessMessage("");
-          }}
-          aria-invalid={Boolean(errors.clientName)}
-          aria-describedby={
-            errors.clientName ? "appointment-client-error" : undefined
-          }
-          required
-        />
+        <div className="appointment-form__input-wrapper">
+          <UserRound
+            className="appointment-form__field-icon"
+            size={17}
+            strokeWidth={1.8}
+            aria-hidden="true"
+          />
+
+          <input
+            id="appointment-client"
+            className="appointment-form__input appointment-form__input--icon"
+            type="text"
+            value={clientName}
+            placeholder="Nome do cliente"
+            autoComplete="name"
+            maxLength={100}
+            onChange={(event) => {
+              setClientName(event.target.value);
+              setErrors((previous) => ({
+                ...previous,
+                clientName: undefined,
+              }));
+              setSuccessMessage("");
+            }}
+            aria-invalid={Boolean(errors.clientName)}
+            aria-describedby={
+              errors.clientName ? "appointment-client-error" : undefined
+            }
+            required
+          />
+        </div>
 
         {errors.clientName && (
           <span

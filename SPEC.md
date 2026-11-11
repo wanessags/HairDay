@@ -1326,6 +1326,36 @@ Validação:
 - Build de produção.
 - Teste manual de exclusão de agendamento.
 
+### Etapa 11.8 — Ícones do formulário
+
+**Status:** Implementado; aguardando validação.
+
+**Arquivo:**
+
+- `src/components/AppointmentForm/AppointmentForm.tsx`
+
+Atividades:
+
+- Adição do ícone CalendarDays no campo Data.
+- Adição do ícone UserRound no campo Cliente.
+- Utilização da biblioteca lucide-react.
+- Preparação de wrappers para posicionar os ícones.
+- Preservação das validações do formulário.
+- Preservação do cadastro de agendamentos.
+- Manutenção de labels e atributos de acessibilidade.
+
+Observações:
+
+- Os ícones ainda precisam de posicionamento via CSS.
+- A fidelidade visual será revisada após a estilização.
+- Nenhuma funcionalidade existente foi removida.
+
+Validação:
+
+- Compilação TypeScript.
+- Build de produção.
+
 ### Próxima etapa
 
-Adicionar ícones ao formulário de agendamento.
+Atualizar AppointmentForm.css para posicionar
+os ícones dourados dentro dos campos.
