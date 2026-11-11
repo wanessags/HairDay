@@ -1419,7 +1419,36 @@ Validação:
 - Build de produção.
 - Verificação visual desktop e mobile.
 
+### Etapa 11.11 — Correção do alinhamento da agenda
+
+**Status:** Implementado; aguardando validação.
+
+**Arquivo:**
+
+- `src/App.css`
+
+Problema identificado:
+
+- O App.css ainda utilizava o layout antigo.
+- O filtro de data aparecia abaixo do título.
+- As alterações anteriores não estavam presentes no arquivo.
+
+Correções:
+
+- Reorganização do cabeçalho com CSS Grid.
+- Posicionamento do filtro à direita no desktop.
+- Alinhamento do título e descrição à esquerda.
+- Aplicação das variáveis de cores do HairDay.
+- Adaptação para tablets e celulares.
+- Preservação dos componentes e funcionalidades.
+
+Validação:
+
+- Compilação TypeScript.
+- Build de produção.
+- Verificação visual em desktop e mobile.
+
 ### Próxima etapa
 
-Revisar o posicionamento do DateFilter
-no cabeçalho e implementar a logo HairDay.
+Adicionar a identidade visual e a logo HairDay
+na parte superior da Sidebar.
