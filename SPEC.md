@@ -840,7 +840,37 @@ Validação:
 - Verificação visual do seletor de data.
 - Verificação da seleção de diferentes datas.
 
+### Etapa 09.1 — Componente AppointmentItem
+
+**Status:** Implementado; aguardando validação e commit.
+
+**Arquivo:**
+
+- `src/components/AppointmentItem/AppointmentItem.tsx`
+
+Atividades:
+
+- Criação do componente reutilizável AppointmentItem.
+- Definição de Props tipadas com TypeScript.
+- Exibição do horário e nome do cliente.
+- Criação do botão de exclusão com ícone de lixeira.
+- Implementação do callback onDelete utilizando o ID.
+- Inclusão de atributos de acessibilidade.
+
+Observações:
+
+- A estilização CSS será implementada na próxima etapa.
+- O componente ainda não está integrado à listagem.
+- A exclusão visual ainda não foi testada.
+- A fidelidade ao Figma ainda precisa ser validada.
+
+Validação:
+
+- Compilação TypeScript.
+- Build de produção.
+- Verificação de formatação do Git.
+
 ### Próxima etapa
 
-Criar o componente AppointmentItem para representar
-cada agendamento com horário, nome e botão de exclusão.
+Implementar AppointmentItem.css para estilizar
+as linhas da agenda e o botão de exclusão.
