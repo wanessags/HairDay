@@ -1184,7 +1184,38 @@ Validação:
 - Build de produção.
 - Verificação visual do formulário.
 
+### Etapa 11.3 — Ajustes visuais da Sidebar
+
+**Status:** Implementado; aguardando validação.
+
+**Arquivo:**
+
+- `src/components/ScheduleSidebar/ScheduleSidebar.css`
+
+Atividades:
+
+- Atualização do fundo para grafite.
+- Aplicação das variáveis globais de cores.
+- Ajuste da largura da Sidebar no desktop.
+- Refinamento dos espaçamentos internos.
+- Ajuste da tipografia do cabeçalho.
+- Melhoria da responsividade para tablet e celular.
+- Preservação dos estilos e funcionalidades existentes.
+
+Observações:
+
+- A logo HairDay ainda será implementada.
+- Os ajustes utilizam medidas aproximadas do Figma.
+- A comparação visual final ainda está pendente.
+- Nenhuma funcionalidade foi removida.
+
+Validação:
+
+- Compilação TypeScript.
+- Build de produção.
+- Verificação visual em desktop e mobile.
+
 ### Próxima etapa
 
-Ajustar a ScheduleSidebar para aproximar
-as dimensões, cores e espaçamentos do Figma.
+Ajustar o App.css para melhorar o alinhamento
+da agenda e o posicionamento do filtro de data.
