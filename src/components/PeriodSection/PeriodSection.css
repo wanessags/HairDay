@@ -1,0 +1,94 @@
+/* ========================================
+   HairDay — Cards dos períodos
+======================================== */
+
+.period-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background-color: var(--color-background);
+}
+
+/* Cabeçalho do período */
+
+.period-section__header {
+  display: flex;
+  align-items: center;
+  min-height: 52px;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.period-section__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+}
+
+.period-section__title {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.period-section__range {
+  color: var(--color-text-muted);
+  font-size: 12px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+/* Lista de agendamentos */
+
+.period-section__content {
+  width: 100%;
+  min-width: 0;
+}
+
+.period-section__list {
+  display: flex;
+  flex-direction: column;
+  padding: 0 12px;
+}
+
+/* Mensagem quando não há agendamentos */
+
+.period-section__empty {
+  margin: 0;
+  padding: 24px 20px;
+  color: var(--color-text-muted);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Responsividade */
+
+@media (max-width: 600px) {
+  .period-section__header {
+    padding: 14px 16px;
+  }
+
+  .period-section__list {
+    padding: 0 8px;
+  }
+
+  .period-section__empty {
+    padding: 20px 16px;
+  }
+}
+
+@media (max-width: 380px) {
+  .period-section__heading {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+}

@@ -1245,7 +1245,35 @@ Validação:
 - Build de produção.
 - Verificação visual desktop e mobile.
 
+### Etapa 11.5 — Correção visual dos cards
+
+**Status:** Implementado; aguardando validação.
+
+**Arquivo:**
+
+- `src/components/PeriodSection/PeriodSection.css`
+
+Problema identificado:
+
+- O arquivo CSS existia, mas estava vazio.
+- Os períodos eram exibidos sem estilização.
+
+Correções:
+
+- Criação dos cards com bordas arredondadas.
+- Estilização dos cabeçalhos dos períodos.
+- Ajuste de cores e espaçamentos.
+- Estilização das mensagens de estado vazio.
+- Adaptação para dispositivos móveis.
+- Preservação das funcionalidades existentes.
+
+Validação:
+
+- Compilação TypeScript.
+- Build de produção.
+- Verificação visual dos três cards.
+
 ### Próxima etapa
 
-Ajustar DateFilter.css para aproximar o
-seletor de data da referência do Figma.
+Revisar os demais arquivos CSS e ajustar
+a interface para maior fidelidade ao Figma.
