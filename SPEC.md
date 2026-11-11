@@ -991,8 +991,41 @@ Validação:
 - Compilação TypeScript.
 - Build de produção.
 
+### Etapa 09.7 — Componente AppointmentList
+
+**Status:** Implementado; aguardando validação e commit.
+
+**Arquivo:**
+
+- `src/components/AppointmentList/AppointmentList.tsx`
+
+Atividades:
+
+- Criação do componente AppointmentList.
+- Integração com useAppointments e Context API.
+- Filtragem dos agendamentos pela data selecionada.
+- Agrupamento dos agendamentos por períodos.
+- Utilização de useMemo para otimizar cálculos.
+- Utilização de reduce() para contar agendamentos.
+- Utilização de map() para renderizar os períodos.
+- Integração com PeriodSection.
+- Conexão do callback de exclusão.
+- Exibição do total de agendamentos da data.
+
+Observações:
+
+- O CSS do AppointmentList ainda será implementado.
+- O componente ainda não está integrado ao App.tsx.
+- Cadastro, filtro e exclusão ainda precisam
+  ser testados na interface.
+- A fidelidade ao Figma ainda não foi validada.
+
+Validação:
+
+- Compilação TypeScript.
+- Build de produção.
+
 ### Próxima etapa
 
-Criar AppointmentList.tsx para conectar
-os períodos ao Context API e listar os
-agendamentos da data selecionada.
+Implementar AppointmentList.css para estilizar
+a listagem e o resumo dos agendamentos.
