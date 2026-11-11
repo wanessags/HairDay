@@ -783,6 +783,35 @@ Validação:
 - Compilação TypeScript.
 - Build de produção.
 
+### Etapa 08.3 — Integração do CSS do DateFilter
+
+**Status:** Implementado; aguardando validação e commit.
+
+**Arquivo:**
+
+- `src/components/DateFilter/DateFilter.tsx`
+
+Atividades:
+
+- Importação do DateFilter.css.
+- Integração dos estilos ao componente.
+- Preservação da comunicação com Context API.
+- Manutenção da Props label tipada.
+- Utilização de useId para acessibilidade.
+- Atualização da data selecionada via onChange.
+
+Observações:
+
+- DateFilter ainda precisa ser integrado ao App.tsx.
+- A filtragem dos agendamentos será conectada à listagem.
+- A fidelidade visual ao Figma ainda não foi validada.
+
+Validação:
+
+- Compilação TypeScript.
+- Build de produção.
+
 ### Próxima etapa
 
-Importar DateFilter.css no componente DateFilter.tsx.
+Integrar o DateFilter ao App.tsx para permitir
+a seleção de datas diretamente na agenda.

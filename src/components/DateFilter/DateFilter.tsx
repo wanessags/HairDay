@@ -1,5 +1,8 @@
-import { useId } from "react";
+import { useId, type ChangeEvent } from "react";
+
 import { useAppointments } from "../../hooks/useAppointments";
+
+import "./DateFilter.css";
 
 type DateFilterProps = {
   label?: string;
@@ -9,9 +12,10 @@ export function DateFilter({
   label = "Data dos agendamentos",
 }: DateFilterProps) {
   const { selectedDate, setSelectedDate } = useAppointments();
+
   const inputId = useId();
 
-  function handleDateChange(event: React.ChangeEvent<HTMLInputElement>) {
+  function handleDateChange(event: ChangeEvent<HTMLInputElement>) {
     setSelectedDate(event.target.value);
   }
 
@@ -27,7 +31,6 @@ export function DateFilter({
         type="date"
         value={selectedDate}
         onChange={handleDateChange}
-        aria-label={label}
       />
     </div>
   );
