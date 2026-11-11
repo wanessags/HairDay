@@ -1,5 +1,6 @@
 import { ScheduleSidebar } from "./components/ScheduleSidebar/ScheduleSidebar";
 import { AppointmentForm } from "./components/AppointmentForm/AppointmentForm";
+import { DateFilter } from "./components/DateFilter/DateFilter";
 
 import "./App.css";
 
@@ -17,6 +18,8 @@ function App() {
           <p className="app__description">
             Consulte e gerencie os agendamentos dos seus clientes.
           </p>
+
+          <DateFilter />
         </header>
 
         <section className="app__appointments" aria-label="Agendamentos do dia">

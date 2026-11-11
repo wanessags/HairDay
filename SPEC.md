@@ -811,7 +811,36 @@ Validação:
 - Compilação TypeScript.
 - Build de produção.
 
+### Etapa 08.4 — Integração do DateFilter à agenda
+
+**Status:** Implementado; aguardando validação e commit.
+
+**Arquivo:**
+
+- `src/App.tsx`
+
+Atividades:
+
+- Importação do componente DateFilter.
+- Integração do seletor de data ao cabeçalho da agenda.
+- Preservação da Sidebar e do formulário.
+- Integração com a data selecionada no Context API.
+- Manutenção da estrutura responsiva existente.
+
+Observações:
+
+- A alteração da data já atualiza o estado global.
+- A listagem filtrada ainda não está implementada.
+- O layout visual ainda precisa ser comparado ao Figma.
+
+Validação:
+
+- Compilação TypeScript.
+- Build de produção.
+- Verificação visual do seletor de data.
+- Verificação da seleção de diferentes datas.
+
 ### Próxima etapa
 
-Integrar o DateFilter ao App.tsx para permitir
-a seleção de datas diretamente na agenda.
+Criar o componente AppointmentItem para representar
+cada agendamento com horário, nome e botão de exclusão.
