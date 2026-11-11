@@ -1083,7 +1083,45 @@ Validação:
 - Compilação TypeScript.
 - Build de produção.
 
+### Etapa 09.10 — Integração da listagem ao App
+
+**Status:** Implementado; aguardando validação funcional.
+
+**Arquivo:**
+
+- `src/App.tsx`
+
+Atividades:
+
+- Integração do AppointmentList à agenda.
+- Substituição da mensagem provisória.
+- Conexão visual entre formulário e listagem.
+- Utilização do Context API para atualização dos dados.
+- Disponibilização do filtro por data.
+- Exibição de agendamentos por períodos.
+- Disponibilização da exclusão individual.
+
+Validações necessárias:
+
+- Cadastro de agendamentos.
+- Atualização imediata da agenda.
+- Filtragem por data.
+- Agrupamento em Manhã, Tarde e Noite.
+- Ordenação cronológica.
+- Exibição da mensagem obrigatória de estado vazio.
+- Exclusão individual sem afetar outros registros.
+- Validação de campos obrigatórios.
+- Compilação TypeScript.
+- Build de produção.
+
+Observações:
+
+- A fidelidade visual ao Figma ainda não foi validada.
+- Testes automatizados com Playwright ainda pendentes.
+- Persistência em localStorage não implementada,
+  pois é opcional no enunciado.
+
 ### Próxima etapa
 
-Integrar o AppointmentList ao App.tsx
-e testar cadastro, filtro por data e exclusão.
+Executar os testes funcionais e revisar
+a interface desktop e mobile.

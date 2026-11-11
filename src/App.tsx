@@ -1,6 +1,7 @@
 import { ScheduleSidebar } from "./components/ScheduleSidebar/ScheduleSidebar";
 import { AppointmentForm } from "./components/AppointmentForm/AppointmentForm";
 import { DateFilter } from "./components/DateFilter/DateFilter";
+import { AppointmentList } from "./components/AppointmentList/AppointmentList";
 
 import "./App.css";
 
@@ -23,9 +24,7 @@ function App() {
         </header>
 
         <section className="app__appointments" aria-label="Agendamentos do dia">
-          <p className="app__empty-message">
-            Os agendamentos serão exibidos aqui.
-          </p>
+          <AppointmentList />
         </section>
       </main>
     </div>
