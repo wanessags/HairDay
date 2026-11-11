@@ -1303,7 +1303,29 @@ Validação:
 - Build de produção.
 - Verificação visual dos ícones.
 
+### Etapa 11.7 — Ícone dourado de exclusão
+
+**Status:** Implementado; aguardando validação.
+
+**Arquivo:**
+
+- `src/components/AppointmentItem/AppointmentItem.tsx`
+
+Atividades:
+
+- Substituição do SVG manual pelo ícone Trash2.
+- Utilização da biblioteca lucide-react.
+- Aplicação da cor dourada da identidade visual.
+- Preservação do callback onDelete.
+- Preservação das Props tipadas.
+- Manutenção dos atributos de acessibilidade.
+
+Validação:
+
+- Compilação TypeScript.
+- Build de produção.
+- Teste manual de exclusão de agendamento.
+
 ### Próxima etapa
 
-Ajustar os ícones de calendário, cliente
-e lixeira para acompanhar o Figma.
+Adicionar ícones ao formulário de agendamento.
