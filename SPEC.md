@@ -337,3 +337,27 @@ Validação:
 
 Implementar as funções utilitárias para filtrar,
 ordenar e agrupar os agendamentos.
+
+### Etapa 04 — Funções utilitárias
+
+**Status:** Implementado; aguardando validação e commit.
+
+**Arquivo:** `src/utils/appointmentUtils.ts`
+
+Atividades:
+
+- Identificação do período por horário.
+- Filtragem de agendamentos por data usando filter().
+- Ordenação cronológica usando sort().
+- Agrupamento por períodos usando reduce().
+- Criação de função para consultar a agenda por data.
+- Preservação do array original durante a ordenação.
+
+Validação:
+
+- Compilação TypeScript com `npx tsc -b`.
+
+### Próxima etapa
+
+Implementar AppointmentContext, Provider e
+o Hook personalizado useAppointments.
