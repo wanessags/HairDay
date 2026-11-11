@@ -930,7 +930,40 @@ Validação:
 - Compilação TypeScript.
 - Build de produção.
 
+### Etapa 09.4 — Componente PeriodSection
+
+**Status:** Implementado; aguardando validação e commit.
+
+**Arquivo:**
+
+- `src/components/PeriodSection/PeriodSection.tsx`
+
+Atividades:
+
+- Criação do componente reutilizável PeriodSection.
+- Definição de Props tipadas com TypeScript.
+- Identificação dos períodos por meio do tipo Period.
+- Exibição do título e intervalo de horários.
+- Ordenação cronológica usando sort().
+- Renderização dos agendamentos usando map().
+- Integração com o componente AppointmentItem.
+- Preservação do callback de exclusão.
+- Exibição da mensagem obrigatória de estado vazio.
+- Utilização de elementos semânticos e aria-labelledby.
+
+Observações:
+
+- O CSS do PeriodSection ainda será implementado.
+- O componente ainda não está integrado à agenda.
+- Os testes funcionais ainda estão pendentes.
+- A fidelidade visual ao Figma ainda não foi validada.
+
+Validação:
+
+- Compilação TypeScript.
+- Build de produção.
+
 ### Próxima etapa
 
-Criar o componente PeriodSection.tsx para
-organizar os agendamentos por manhã, tarde e noite.
+Implementar PeriodSection.css para estilizar
+as seções Manhã, Tarde e Noite.
