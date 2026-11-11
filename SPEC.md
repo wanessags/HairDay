@@ -361,3 +361,33 @@ Validação:
 
 Implementar AppointmentContext, Provider e
 o Hook personalizado useAppointments.
+
+### Etapa 05.1 — AppointmentContext
+
+**Status:** Implementado; aguardando validação.
+
+**Arquivo:** `src/contexts/AppointmentContext.tsx`
+
+Atividades:
+
+- Criação do AppointmentContext.
+- Implementação do AppointmentProvider.
+- Gerenciamento de agendamentos com useState.
+- Gerenciamento da data selecionada.
+- Implementação do cadastro com validação básica.
+- Implementação da exclusão individual com filter().
+- Utilização de useCallback e useMemo.
+
+Observações:
+
+- O Provider ainda precisa ser integrado ao main.tsx.
+- O Hook useAppointments será criado na próxima etapa.
+- Os dados permanecem em memória.
+
+Validação:
+
+- Compilação TypeScript.
+
+### Próxima etapa
+
+Criar o Hook personalizado useAppointments.ts.
