@@ -1121,7 +1121,37 @@ Observações:
 - Persistência em localStorage não implementada,
   pois é opcional no enunciado.
 
+### Etapa 11.1 — Identidade visual do HairDay
+
+**Status:** Implementado; aguardando validação.
+
+**Arquivo:**
+
+- `src/index.css`
+
+Atividades:
+
+- Revisão visual da aplicação com base no Figma.
+- Atualização da paleta global para dourado e grafite.
+- Definição de variáveis CSS reutilizáveis.
+- Padronização das cores de textos e bordas.
+- Preservação dos estilos globais de acessibilidade.
+- Manutenção da responsividade existente.
+
+Observações:
+
+- Os componentes ainda utilizam algumas cores fixas.
+- A nova paleta será aplicada gradualmente.
+- As cores ainda precisam ser conferidas no Style Guide.
+- Nenhuma funcionalidade de agendamento foi removida.
+
+Validação:
+
+- Compilação TypeScript.
+- Build de produção.
+- Verificação visual da aplicação.
+
 ### Próxima etapa
 
-Executar os testes funcionais e revisar
-a interface desktop e mobile.
+Atualizar AppointmentForm.css para aplicar
+os estilos dourados aos campos e botões.

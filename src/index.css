@@ -1,25 +1,48 @@
 /* ========================================
-   HairDay — Estilos globais
+   HairDay — Identidade visual global
 ======================================== */
 
 :root {
   font-family: "Inter", Arial, Helvetica, sans-serif;
-  color: #ffffff;
-  background-color: #17181c;
+
+  color: #f5f4f5;
+  background-color: #19181b;
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --color-background: #17181c;
-  --color-surface: #23242c;
-  --color-border: #35363e;
-  --color-text: #ffffff;
-  --color-text-muted: #9899a6;
-  --color-primary: #b7a5f9;
+  /* Cores principais */
+  --color-background: #19181b;
+  --color-sidebar: #252429;
+  --color-surface: #232227;
+  --color-surface-dark: #19181b;
+
+  /* Bordas */
+  --color-border: #35343a;
+  --color-border-hover: #66616b;
+
+  /* Textos */
+  --color-text: #f5f4f5;
+  --color-text-muted: #a7a4ae;
+  --color-text-secondary: #c4c1c9;
+
+  /* Identidade HairDay */
+  --color-primary: #b8952e;
+  --color-primary-hover: #d0aa3b;
+  --color-primary-active: #a48326;
+
+  /* Feedback */
+  --color-error: #ffa1aa;
+  --color-success: #a7f3cf;
 }
 
-* {
+/* Reset */
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -32,6 +55,8 @@ body {
   min-width: 320px;
   min-height: 100vh;
   margin: 0;
+  background-color: var(--color-background);
+  color: var(--color-text);
 }
 
 button,
@@ -61,9 +86,11 @@ a {
 }
 
 ::selection {
-  color: #17181c;
-  background-color: #b7a5f9;
+  background-color: var(--color-primary);
+  color: #19181b;
 }
+
+/* Acessibilidade */
 
 @media (prefers-reduced-motion: reduce) {
   *,
