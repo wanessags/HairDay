@@ -963,7 +963,36 @@ Validação:
 - Compilação TypeScript.
 - Build de produção.
 
+### Etapa 09.6 — Integração do CSS do PeriodSection
+
+**Status:** Implementado; aguardando validação e commit.
+
+**Arquivo:**
+
+- `src/components/PeriodSection/PeriodSection.tsx`
+
+Atividades:
+
+- Importação do PeriodSection.css.
+- Aplicação dos estilos aos blocos de períodos.
+- Preservação das Props tipadas.
+- Preservação da ordenação cronológica.
+- Preservação da mensagem obrigatória de estado vazio.
+- Manutenção do callback de exclusão.
+
+Observações:
+
+- O PeriodSection ainda precisa ser integrado à agenda.
+- Os testes funcionais ainda estão pendentes.
+- A fidelidade visual ao Figma ainda não foi validada.
+
+Validação:
+
+- Compilação TypeScript.
+- Build de produção.
+
 ### Próxima etapa
 
-Implementar PeriodSection.css para estilizar
-as seções Manhã, Tarde e Noite.
+Criar AppointmentList.tsx para conectar
+os períodos ao Context API e listar os
+agendamentos da data selecionada.

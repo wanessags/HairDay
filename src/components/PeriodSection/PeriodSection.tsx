@@ -2,6 +2,8 @@ import { AppointmentItem } from "../AppointmentItem/AppointmentItem";
 
 import type { Appointment, Period } from "../../types/appointment";
 
+import "./PeriodSection.css";
+
 type PeriodSectionProps = {
   period: Period;
   title: string;
