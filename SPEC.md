@@ -612,7 +612,40 @@ Validação:
 - Build de produção.
 - Verificação visual desktop e mobile.
 
+### Etapa 07.1 — Componente AppointmentForm
+
+**Status:** Implementado; aguardando validação e commit.
+
+**Arquivo:**
+
+- `src/components/AppointmentForm/AppointmentForm.tsx`
+
+Atividades:
+
+- Criação do formulário de agendamentos.
+- Integração com o Hook useAppointments.
+- Gerenciamento dos campos com useState.
+- Seleção de horários por período.
+- Utilização de map() para renderizar horários.
+- Validação de campos obrigatórios.
+- Inclusão de mensagens de erro e sucesso.
+- Utilização de labels e atributos de acessibilidade.
+- Preparação para integração com a Sidebar.
+
+Observações:
+
+- O CSS do formulário ainda será implementado.
+- O formulário ainda não está integrado à Sidebar.
+- A validação completa de datas permanece pendente.
+- Os testes funcionais ainda não foram executados.
+- A interface ainda precisa ser comparada ao Figma.
+
+Validação:
+
+- Compilação TypeScript.
+- Build de produção.
+
 ### Próxima etapa
 
-Implementar o componente AppointmentForm
-para cadastro de agendamentos.
+Implementar AppointmentForm.css com os estilos
+do formulário e dos botões de horários.
