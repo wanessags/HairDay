@@ -1355,7 +1355,71 @@ Validação:
 - Compilação TypeScript.
 - Build de produção.
 
+### Etapa 11.9 — Posicionamento dos ícones do formulário
+
+**Status:** Implementado; aguardando validação.
+
+**Arquivo:**
+
+- `src/components/AppointmentForm/AppointmentForm.css`
+
+Atividades:
+
+- Posicionamento dos ícones dentro dos campos.
+- Aplicação da cor dourada aos ícones.
+- Ajuste do espaçamento interno dos inputs.
+- Preservação do calendário nativo do navegador.
+- Refinamento dos estados hover e focus-visible.
+- Manutenção das validações e da responsividade.
+
+Observações:
+
+- O JSX dos ícones foi implementado na etapa 11.8.
+- Nenhuma funcionalidade foi removida.
+- A fidelidade visual ainda precisa ser conferida.
+
+Validação:
+
+- Compilação TypeScript.
+- Build de produção.
+- Verificação visual dos campos de data e cliente.
+
 ### Próxima etapa
 
-Atualizar AppointmentForm.css para posicionar
-os ícones dourados dentro dos campos.
+Ajustar DateFilter para aproximar o seletor
+de data da agenda ao Figma.
+
+### Etapa 11.10 — Ajustes do filtro de data
+
+**Status:** Implementado; aguardando validação.
+
+**Arquivo:**
+
+- `src/components/DateFilter/DateFilter.css`
+
+Atividades:
+
+- Aplicação da identidade visual do HairDay.
+- Ajuste das cores e bordas do seletor.
+- Refinamento da tipografia.
+- Configuração de largura compacta.
+- Destaque dourado nos estados hover e foco.
+- Preservação do calendário nativo.
+- Manutenção da responsividade.
+
+Observações:
+
+- O posicionamento à direita depende do App.css.
+- A fidelidade visual ao Figma ainda precisa ser conferida.
+- Nenhuma funcionalidade foi removida.
+
+Validação:
+
+- Compilação TypeScript.
+- Build de produção.
+- Verificação visual desktop e mobile.
+
+### Próxima etapa
+
+Revisar o posicionamento do DateFilter
+no cabeçalho e implementar a logo HairDay.
