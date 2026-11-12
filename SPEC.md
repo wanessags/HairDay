@@ -4,47 +4,39 @@
 
 **Projeto:** HairDay — Sistema de Agendamentos  
 **Disciplina:** Single Page Application (SPA)  
-**Tecnologias:** React, Vite 8, TypeScript e CSS  
+**Tecnologias:** React, TypeScript, Vite 8 e CSS  
 **Biblioteca de ícones:** Lucide React  
-**Ferramentas:** ChatGPT, Figma, Context7 MCP e Playwright MCP  
-**Repositório:** https://github.com/wanessags/HairDay  
-**Status:** Em desenvolvimento — fase de testes e revisão final
+**Testes automatizados:** Playwright  
+**Ferramentas de desenvolvimento:** ChatGPT, Visual Studio Code, Git e GitHub  
+**Ferramentas MCP previstas:** Context7 MCP e Playwright MCP  
+**Data da atualização:** 12/11/2026  
+**Status:** Funcionalidades principais implementadas e testes automatizados aprovados; evidências e revisão final pendentes.
 
 ---
 
 ## 2. Objetivo
 
-Desenvolver uma aplicação web responsiva para gerenciamento de agendamentos de salões de beleza e barbearias, reproduzindo a interface disponibilizada no Figma.
+Desenvolver uma aplicação web responsiva para gerenciamento de agendamentos em salões de beleza e barbearias, utilizando React, TypeScript e Vite 8.
 
-A aplicação permite cadastrar, visualizar, filtrar e excluir agendamentos, organizando os atendimentos por data e período.
+A aplicação permite cadastrar, visualizar, filtrar e excluir agendamentos, organizando os atendimentos por períodos do dia.
 
-O projeto aplica conceitos de:
+O projeto foi desenvolvido com base no protótipo disponibilizado no Figma, aplicando conceitos de Single Page Application (SPA), componentização, Hooks, Context API, Props, gerenciamento de estado e manipulação de arrays.
 
-- Componentização e reutilização de componentes.
-- Props tipadas com TypeScript.
-- Hooks do React.
-- Gerenciamento de estado com `useState`.
-- Context API e Provider.
-- Manipulação de arrays com `map()`, `filter()` e `reduce()`.
-- Validação de formulários.
-- Desenvolvimento assistido por Inteligência Artificial.
-- Responsividade e acessibilidade.
-
-O desenvolvimento é realizado por etapas, mantendo documentação, testes e commits organizados.
+O desenvolvimento contou com apoio de Inteligência Artificial para planejamento, implementação, revisão e testes.
 
 ---
 
-## 3. Referências oficiais
+## 3. Referências do projeto
 
-### Notion — Enunciado e Board
+### 3.1 Notion — Enunciado oficial
 
 https://deluxe-blue-bc1.notion.site/Projeto-04-HairDay-Agendamentos-com-React-TypeScript-IA-414dfca74d8d81919380c39dcde5d2e3
 
-### Figma — Protótipo oficial
+### 3.2 Figma — Protótipo
 
 https://www.figma.com/design/0UAXn1uIaIWTUDnBj1Tzct/Plataforma-de-agendamento--Community---Copy-?node-id=3-376
 
-### GitHub
+### 3.3 GitHub
 
 https://github.com/wanessags/HairDay
 
@@ -52,23 +44,31 @@ https://github.com/wanessags/HairDay
 
 ## 4. Tecnologias utilizadas
 
-| Tecnologia     | Finalidade                              |
-| -------------- | --------------------------------------- |
-| React          | Desenvolvimento da interface            |
-| Vite 8         | Ambiente de desenvolvimento e build     |
-| TypeScript     | Tipagem estática                        |
-| CSS            | Estilização e responsividade            |
-| Lucide React   | Ícones da aplicação                     |
-| Context API    | Compartilhamento de estado              |
-| React Hooks    | Gerenciamento de estado e comportamento |
-| Git            | Versionamento                           |
-| GitHub         | Hospedagem do código-fonte              |
-| ChatGPT        | Desenvolvimento assistido por IA        |
-| Figma          | Referência de design                    |
-| Context7 MCP   | Consulta de documentação                |
-| Playwright MCP | Testes automatizados                    |
+| Tecnologia        | Finalidade                       | Situação           |
+| ----------------- | -------------------------------- | ------------------ |
+| React             | Construção da interface          | Implementado       |
+| TypeScript        | Tipagem do projeto               | Implementado       |
+| Vite 8.3.8        | Desenvolvimento e build          | Validado           |
+| CSS               | Estilização e responsividade     | Implementado       |
+| Lucide React      | Ícones visuais                   | Implementado       |
+| React Hooks       | Estado e comportamento           | Implementado       |
+| Context API       | Compartilhamento de dados        | Implementado       |
+| Playwright 1.65.0 | Testes automatizados             | 9 testes aprovados |
+| Git               | Versionamento                    | Utilizado          |
+| GitHub            | Repositório remoto               | Utilizado          |
+| ChatGPT           | Desenvolvimento assistido por IA | Utilizado          |
+| Figma             | Referência da interface          | Utilizado          |
+| Context7 MCP      | Consulta de documentação         | Evidência pendente |
+| Playwright MCP    | Automação por ferramenta MCP     | Evidência pendente |
 
-**Observação:** Context7 MCP e Playwright MCP fazem parte das ferramentas previstas no projeto, mas suas utilizações ainda precisam ser executadas e documentadas com evidências.
+### 4.1 Ambiente de desenvolvimento validado
+
+- Sistema operacional: Windows.
+- Terminal: PowerShell 5.1.
+- Node.js: v24.19.0.
+- Vite: v8.3.8.
+- Playwright: v1.65.0.
+- Navegador dos testes: Chromium.
 
 ---
 
@@ -76,155 +76,187 @@ https://github.com/wanessags/HairDay
 
 ### RF01 — Cadastro de agendamentos
 
-**Status:** Implementado e aprovado em teste manual.
+**Status: Implementado e testado.**
 
-A aplicação deve permitir cadastrar agendamentos informando:
+A aplicação permite cadastrar um agendamento com:
 
 - Nome do cliente.
-- Data do atendimento.
-- Horário do atendimento.
+- Data.
+- Horário.
 
-Após o cadastro, a agenda deve ser atualizada imediatamente, sem recarregar a página.
+Após o cadastro, a agenda é atualizada imediatamente, sem necessidade de recarregar a página.
 
 ### RF02 — Validação do formulário
 
-**Status:** Parcialmente validado.
+**Status: Implementado e testado.**
 
-O formulário deve:
+O formulário impede a criação de agendamentos quando os campos obrigatórios estão vazios.
 
-- Impedir cadastro sem nome do cliente.
-- Impedir cadastro sem horário.
-- Impedir cadastro sem data.
-- Apresentar mensagens claras de erro.
-- Exibir confirmação após cadastro válido.
+Validações implementadas e confirmadas:
 
-**Testes aprovados:** nome obrigatório e horário obrigatório.
+- Nome obrigatório.
+- Data obrigatória.
+- Horário obrigatório.
 
-**Pendente:** teste de data obrigatória e revisão de datas inválidas.
+Mensagens de erro:
 
-### RF03 — Listagem de agendamentos
+- "Informe o nome do cliente."
+- "Selecione uma data."
+- "Selecione um horário."
 
-**Status:** Implementado e validado parcialmente.
+Os dados inválidos não devem gerar novos agendamentos.
 
-Cada agendamento deve apresentar:
+### RF03 — Listagem dos agendamentos
+
+**Status: Implementado e testado.**
+
+Cada agendamento apresenta:
 
 - Horário.
 - Nome do cliente.
-- Ícone de lixeira para exclusão.
+- Botão de exclusão.
 
-Os registros devem aparecer na data e no período correspondentes.
+Os registros são apresentados dentro do período correspondente.
 
 ### RF04 — Filtro por data
 
-**Status:** Implementado e aprovado em teste manual.
+**Status: Implementado e testado.**
 
-O calendário da agenda permite selecionar uma data e visualizar somente os agendamentos correspondentes.
+O usuário pode selecionar uma data no calendário da agenda e visualizar somente os agendamentos correspondentes.
 
-Alterar a data não deve excluir nem modificar os registros.
+Alterar a data selecionada não exclui os registros de outras datas.
 
-### RF05 — Agrupamento por períodos
+### RF05 — Organização por períodos
 
-**Status:** Implementado e aprovado em teste manual.
+**Status: Implementado e testado.**
 
-Os agendamentos devem ser organizados em:
+Os horários estão organizados em três períodos:
 
-| Período | Horários       |
+| Período | Intervalo      |
 | ------- | -------------- |
 | Manhã   | 09:00 às 12:00 |
 | Tarde   | 13:00 às 18:00 |
 | Noite   | 19:00 às 21:00 |
 
-Os registros devem aparecer em ordem cronológica.
+O projeto disponibiliza 13 horários de atendimento.
 
-**Pendente:** teste específico de ordenação com múltiplos registros fora de ordem.
+### RF06 — Ordenação cronológica
 
-### RF06 — Exclusão de agendamentos
+**Status: Implementado e testado.**
 
-**Status:** Implementado e aprovado em teste manual.
+Os agendamentos são apresentados em ordem crescente de horário, independentemente da sequência em que foram cadastrados.
 
-O sistema deve excluir somente o agendamento selecionado pelo botão de lixeira.
+### RF07 — Exclusão individual
 
-A exclusão deve atualizar imediatamente a interface.
+**Status: Implementado e testado.**
 
-### RF07 — Estados vazios
+A aplicação permite excluir um agendamento específico pelo botão de lixeira.
 
-**Status:** Implementado e observado no teste manual de exclusão.
+A exclusão remove somente o registro selecionado, preservando os demais.
 
-Quando um período não possuir agendamentos, deve aparecer exatamente:
+A agenda é atualizada imediatamente.
+
+### RF08 — Mensagem de período vazio
+
+**Status: Implementado e validado manualmente.**
+
+Quando não há agendamentos em um período, a aplicação apresenta exatamente:
 
 > Você ainda não tem agendamentos cadastrados nesse período.
 
-### RF08 — Gerenciamento em memória
+### RF09 — Gerenciamento dos dados
 
-**Status:** Implementado.
+**Status: Implementado.**
 
-Os agendamentos são armazenados no estado do React durante a utilização da aplicação.
+Os agendamentos são gerenciados em memória usando o estado do React e a Context API.
 
-Não é necessário backend, banco de dados ou autenticação.
+O escopo da atividade não exige backend, autenticação ou banco de dados.
 
-Os dados não possuem persistência obrigatória após recarregar a página.
+Os registros não são preservados após o recarregamento da página.
 
 ---
 
-## 6. Requisitos de interface
+## 6. Requisitos não funcionais
 
-A interface deve reproduzir visualmente o Figma do HairDay.
+### RNF01 — Responsividade
 
-### Sidebar
+**Status: Implementado e testado em viewport mobile.**
 
-- Identidade visual HairDay.
-- Ícone de tesoura.
-- Título de agendamento.
-- Descrição do formulário.
-- Campo de data com ícone.
-- Horários disponíveis.
-- Campo Cliente com ícone.
-- Botão AGENDAR.
+A interface adapta sua organização para diferentes tamanhos de tela.
 
-### Agenda
+No desktop:
 
-- Título "Sua agenda".
-- Descrição dos atendimentos.
-- Filtro de data.
-- Seção Manhã.
-- Seção Tarde.
-- Seção Noite.
-- Ícones correspondentes aos períodos.
-- Linhas de agendamentos.
-- Ícones de exclusão.
-- Mensagens de períodos vazios.
+- Sidebar à esquerda.
+- Agenda à direita.
+- Filtro de data no cabeçalho da agenda.
 
-### Identidade visual
+No mobile:
 
-- Fundo em tons de grafite.
-- Destaques dourados.
-- Bordas discretas.
+- Formulário e agenda organizados verticalmente.
+- Controles adaptados à largura disponível.
+- Ausência de rolagem horizontal no cenário automatizado de 390 × 844 pixels.
+
+### RNF02 — Acessibilidade
+
+**Status: Recursos implementados e testes manuais básicos realizados.**
+
+A interface utiliza:
+
+- Labels associados aos campos.
+- HTML semântico.
+- Identificação acessível de botões.
+- Estados de foco.
+- Feedback de validação.
+- Navegação por teclado.
+- Suporte à preferência por movimento reduzido.
+
+Uma auditoria completa de acessibilidade e testes com leitores de tela permanecem pendentes.
+
+### RNF03 — Identidade visual
+
+**Status: Implementado; comparação final com o Figma pendente.**
+
+A interface utiliza:
+
+- Fundo grafite.
+- Elementos dourados.
 - Tipografia legível.
+- Cards com bordas arredondadas.
 - Ícones Lucide React.
-- Layout organizado e responsivo.
+- Identidade visual HairDay com tesoura.
+- Formulário e agenda organizados.
 
-**Situação:** interface desktop visualmente revisada com capturas de tela. Fidelidade exata ao Figma ainda não confirmada.
+### RNF04 — Organização e manutenção
 
-### Responsividade
+**Status: Implementado.**
 
-A interface deve funcionar em:
+O projeto utiliza componentes reutilizáveis, tipagem TypeScript e separação de responsabilidades em pastas.
 
-- Desktop.
-- Notebook.
-- Tablet.
-- Celular.
+### RNF05 — Compilação de produção
 
-No desktop, a Sidebar aparece à esquerda e a agenda à direita.
+**Status: Aprovado.**
 
-Em dispositivos menores, o layout deve se reorganizar verticalmente.
+Os comandos abaixo foram executados com sucesso após a atualização para Vite 8:
 
-**Status:** regras responsivas implementadas; testes visuais mobile pendentes.
+```bash
+npx tsc -b
+npm run build
+```
+
+Resultado confirmado:
+
+```text
+vite v8.3.8 building client environment for production...
+
+✓ 2099 modules transformed.
+✓ built in 2.13s
+```
 
 ---
 
-## 7. Modelo de dados TypeScript
+## 7. Modelo de dados
 
-Cada agendamento utiliza a estrutura:
+### 7.1 Appointment
 
 ```typescript
 export type Appointment = {
@@ -235,25 +267,33 @@ export type Appointment = {
 };
 ```
 
-Tipos auxiliares:
+### 7.2 Period
 
 ```typescript
 export type Period = "morning" | "afternoon" | "evening";
+```
 
+### 7.3 AppointmentFormData
+
+```typescript
 export type AppointmentFormData = Omit<Appointment, "id">;
+```
 
+### 7.4 AppointmentsByPeriod
+
+```typescript
 export type AppointmentsByPeriod = Record<Period, Appointment[]>;
 ```
 
-### Descrição
+### 7.5 Campos
 
-- `id`: identificador único do agendamento.
-- `clientName`: nome do cliente.
-- `date`: data do atendimento.
-- `time`: horário selecionado.
-- `Period`: período correspondente.
-- `AppointmentFormData`: dados utilizados no cadastro.
-- `AppointmentsByPeriod`: agrupamento dos atendimentos.
+| Campo      | Descrição              |
+| ---------- | ---------------------- |
+| id         | Identificador único    |
+| clientName | Nome do cliente        |
+| date       | Data do agendamento    |
+| time       | Horário selecionado    |
+| Period     | Período de atendimento |
 
 ---
 
@@ -297,12 +337,15 @@ hairday/
 │   ├── App.css
 │   ├── index.css
 │   └── main.tsx
+├── tests/
+│   └── hairday.spec.ts
+├── .gitignore
 ├── AGENTS.md
 ├── SPEC.md
 ├── README.md
+├── index.html
 ├── package.json
 ├── package-lock.json
-├── index.html
 └── vite.config.ts
 ```
 
@@ -310,92 +353,93 @@ hairday/
 
 ## 9. Componentização
 
-### ScheduleSidebar
+### 9.1 ScheduleSidebar
 
-Responsável pela área lateral da aplicação.
+Responsável pela Sidebar da aplicação.
 
-Contém a identidade HairDay, o título e o formulário recebido por `children`.
+Contém a identificação visual do HairDay, o título, a descrição e a área do formulário.
 
-Utiliza Props tipadas com `ReactNode`.
+Utiliza Props tipadas para receber conteúdo.
 
-### AppointmentForm
+### 9.2 AppointmentForm
 
-Responsável pelo cadastro dos agendamentos.
+Responsável por cadastrar agendamentos.
+
+Implementa:
+
+- Seleção da data.
+- Seleção dos horários disponíveis.
+- Campo do nome do cliente.
+- Validação.
+- Mensagens de erro.
+- Mensagem de sucesso.
+- Integração com o contexto.
+
+### 9.3 DateFilter
+
+Responsável pelo seletor de data da agenda.
+
+Utiliza o contexto compartilhado para modificar a data selecionada.
+
+### 9.4 AppointmentList
+
+Responsável pela apresentação dos agendamentos.
 
 Utiliza:
 
-- `useState`.
-- `useAppointments`.
-- Eventos de formulário.
-- Validação de campos.
-- Seleção de horários.
-- Mensagens de erro e sucesso.
+- Context API.
+- Hook personalizado.
+- Filtragem por data.
+- Agrupamento por períodos.
+- Renderização dos registros.
 
-### AppointmentItem
+### 9.5 PeriodSection
 
-Representa um agendamento individual.
+Responsável por representar visualmente cada período.
 
-Recebe Props tipadas e utiliza o callback `onDelete` para solicitar a exclusão pelo ID.
-
-### AppointmentList
-
-Responsável pela listagem dos agendamentos da data selecionada.
-
-Utiliza `useMemo`, Context API, funções utilitárias e renderização de períodos com `map()`.
-
-### PeriodSection
-
-Responsável pela apresentação de um período.
-
-Exibe:
+Apresenta:
 
 - Ícone.
 - Título.
 - Intervalo de horários.
-- Lista de agendamentos.
+- Agendamentos.
 - Mensagem de estado vazio.
 
-### DateFilter
+### 9.6 AppointmentItem
 
-Responsável pelo calendário da agenda.
+Responsável por representar cada agendamento individual.
 
-Utiliza o contexto para acessar e modificar a data selecionada.
+Exibe o horário, o cliente e o botão de exclusão.
+
+Utiliza Props tipadas e callback de exclusão.
 
 ---
 
 ## 10. Gerenciamento de estado
 
-O gerenciamento de estado utiliza:
+### 10.1 useState
 
-- `useState`.
-- `useContext`.
-- `useCallback`.
-- `useMemo`.
-- Context API.
-- AppointmentProvider.
-- Hook personalizado `useAppointments`.
+Utilizado para controlar os dados dos agendamentos, a data selecionada e os campos do formulário.
 
-### AppointmentContext
+### 10.2 Context API
 
-Centraliza:
+O `AppointmentContext` centraliza os dados e as operações relacionadas aos agendamentos.
 
-- Lista de agendamentos.
-- Data selecionada.
-- Função de cadastro.
-- Função de exclusão.
-- Atualização da data.
+### 10.3 AppointmentProvider
 
-### AppointmentProvider
+Disponibiliza o contexto aos componentes, sendo integrado à raiz da aplicação em `main.tsx`.
 
-Disponibiliza os dados aos componentes da aplicação.
+### 10.4 useAppointments
 
-O Provider está integrado ao `main.tsx`.
+Hook personalizado que permite aos componentes acessar o contexto.
 
-### useAppointments
+### 10.5 useMemo
 
-Hook responsável por consumir o contexto.
+Utilizado para evitar cálculos desnecessários durante a preparação dos dados.
 
-Permite aos componentes acessar os dados sem duplicar o gerenciamento de estado.
+### 10.6 useCallback
+
+Utilizado para estabilizar funções relacionadas ao gerenciamento dos agendamentos.
 
 ---
 
@@ -403,546 +447,543 @@ Permite aos componentes acessar os dados sem duplicar o gerenciamento de estado.
 
 ### map()
 
-Utilizado para renderizar:
-
-- Horários disponíveis.
-- Períodos da agenda.
-- Agendamentos individuais.
+Utilizado para renderizar horários, períodos e agendamentos.
 
 ### filter()
 
-Utilizado para:
-
-- Filtrar agendamentos por data.
-- Remover agendamentos pelo identificador.
+Utilizado para filtrar registros pela data selecionada e excluir agendamentos pelo identificador.
 
 ### reduce()
 
-Utilizado para agrupar os agendamentos por período.
+Utilizado no agrupamento dos registros por período.
 
 ### sort()
 
-Utilizado para organizar os registros cronologicamente.
+Utilizado para apresentar os horários em ordem cronológica.
 
 ### flatMap()
 
-Utilizado para reunir os horários disponíveis dos três períodos.
+Utilizado para reunir os horários dos diferentes períodos em uma única lista.
 
 ---
 
-## 12. Histórico de desenvolvimento
+## 12. Histórico do desenvolvimento
 
-### Etapa 01 — Preparação do projeto
+### Etapa 01 — Preparação
 
-**Status:** Implementado.
+**Status: Concluída.**
 
-- Criação do projeto React com TypeScript e Vite 8.
+- Criação do projeto React e TypeScript.
+- Estruturação de pastas.
 - Inicialização do Git.
-- Configuração do repositório GitHub.
-- Criação do AGENTS.md.
-- Preparação do SPEC.md.
-- Criação da estrutura de pastas.
+- Configuração do GitHub.
+- Criação do `AGENTS.md` e `SPEC.md`.
 
 ### Etapa 02 — Tipos TypeScript
 
-**Status:** Implementado.
+**Status: Concluída.**
 
-- Criação de Appointment.
-- Definição de Period.
+- Criação do tipo Appointment.
+- Definição do tipo Period.
 - Criação de AppointmentFormData.
 - Criação de AppointmentsByPeriod.
 
-### Etapa 03 — Horários disponíveis
+### Etapa 03 — Horários e períodos
 
-**Status:** Implementado.
+**Status: Concluída.**
 
-- Configuração dos três períodos.
-- Definição de 13 horários.
-- Criação de SCHEDULE_PERIODS.
-- Criação de AVAILABLE_TIMES.
+- Definição dos períodos.
+- Configuração dos 13 horários.
+- Criação das constantes de agendamento.
 
 ### Etapa 04 — Funções utilitárias
 
-**Status:** Implementado.
+**Status: Concluída.**
 
 - Filtragem por data.
-- Identificação do período.
 - Ordenação cronológica.
-- Agrupamento por período.
-- Preservação do array original durante a ordenação.
+- Identificação dos períodos.
+- Agrupamento dos agendamentos.
 
 ### Etapa 05 — Context API e Hooks
 
-**Status:** Implementado.
+**Status: Concluída.**
 
 - Criação do AppointmentContext.
 - Implementação do AppointmentProvider.
-- Criação de useAppointments.
-- Integração ao main.tsx.
-- Cadastro e exclusão utilizando estado React.
+- Implementação do useAppointments.
+- Integração do Provider ao main.tsx.
 
 ### Etapa 06 — Estrutura visual
 
-**Status:** Implementado.
+**Status: Concluída.**
 
-- Criação da ScheduleSidebar.
-- Criação do layout principal.
-- Configuração dos estilos globais.
-- Estilização da Sidebar.
-- Implementação das regras responsivas iniciais.
+- Criação da Sidebar.
+- Layout principal.
+- Estilos globais.
+- Regras iniciais de responsividade.
 
 ### Etapa 07 — Formulário
 
-**Status:** Implementado.
+**Status: Concluída.**
 
-- Criação do AppointmentForm.
-- Campos de nome e data.
+- Implementação do formulário.
+- Campos obrigatórios.
 - Seleção de horários.
-- Validação de campos obrigatórios.
+- Validações.
 - Mensagens de erro e sucesso.
-- Integração ao Context API.
-- Estilização do formulário.
+- Integração com a Sidebar.
 
 ### Etapa 08 — Filtro de data
 
-**Status:** Implementado.
+**Status: Concluída.**
 
 - Criação do DateFilter.
-- Integração com Context API.
-- Estilização do calendário.
-- Posicionamento do filtro na agenda.
-- Atualização dinâmica da data selecionada.
+- Estilização.
+- Integração com o contexto.
+- Conexão com a listagem.
 
-### Etapa 09 — Listagem de agendamentos
+### Etapa 09 — Listagem
 
-**Status:** Implementado.
+**Status: Concluída.**
 
 - Criação do AppointmentItem.
 - Criação do PeriodSection.
 - Criação do AppointmentList.
-- Exibição de registros por período.
-- Implementação das mensagens de estado vazio.
-- Integração da exclusão.
-- Integração da listagem ao App.tsx.
+- Organização visual dos períodos.
+- Implementação da exclusão.
 
 ### Etapa 10 — Integração funcional
 
-**Status:** Implementado; verificações complementares pendentes.
+**Status: Concluída.**
 
-- Integração entre formulário e listagem.
-- Atualização imediata dos agendamentos.
-- Integração do filtro por data.
-- Exclusão individual pelo Context API.
+- Integração entre formulário e agenda.
+- Atualização imediata.
+- Filtro por data.
+- Exclusão individual.
+- Agrupamento e ordenação.
 
-### Etapa 11 — Ajustes visuais conforme o Figma
+### Etapa 11 — Ajustes visuais
 
-**Status:** Implementado parcialmente; revisão final pendente.
+**Status: Implementada; fidelidade final pendente de revisão.**
 
-#### Etapas 11.1 a 11.5
+- Atualização da paleta para grafite e dourado.
+- Ajustes na Sidebar.
+- Refinamento dos campos e horários.
+- Inclusão dos ícones Lucide React.
+- Correção dos cards.
+- Ajuste do seletor de data.
+- Correção do alinhamento do cabeçalho.
+- Inclusão da marca HairDay.
+- Remoção de elementos visuais excedentes da agenda.
+- Verificação visual da interface desktop.
 
-- Atualização da identidade visual para dourado e grafite.
-- Ajustes do formulário e da Sidebar.
-- Reorganização da agenda.
-- Correção dos cards de períodos.
-- Ajustes responsivos.
+### Etapa 12 — Testes manuais
 
-#### Etapas 11.6 a 11.10
+**Status: Concluída nos 11 cenários informados.**
 
-- Instalação do Lucide React.
-- Inclusão dos ícones dos períodos.
-- Inclusão do ícone de exclusão.
-- Inclusão de ícones no formulário.
-- Ajustes visuais do seletor de data.
+Foram executados testes manuais de cadastro, exclusão, filtros, validações, agrupamento, ordenação, mobile e navegação por teclado.
 
-#### Etapa 11.11 — Correção do cabeçalho
+### Etapa 13 — Testes automatizados
 
-- Identificação do CSS antigo.
-- Atualização efetiva do App.css.
-- Implementação do CSS Grid.
-- Correção do alinhamento do filtro no desktop.
+**Status: Concluída.**
 
-#### Etapas 11.12 e 11.13 — Marca HairDay
+- Instalação do Playwright.
+- Instalação do Chromium.
+- Criação do arquivo `tests/hairday.spec.ts`.
+- Implementação de nove cenários.
+- Correção de seletor ambíguo.
+- Execução final com nove testes aprovados.
 
-- Inclusão do ícone de tesoura.
-- Inclusão do nome HairDay.
-- Estilização e posicionamento da marca.
-- Ajustes de espaçamento na Sidebar.
+### Etapa 14 — Organização técnica
 
-#### Etapa 11.14 — Revisão visual
+**Status: Concluída nas verificações principais.**
 
-- Conferência da tela desktop por captura.
-- Verificação de Sidebar, ícones e cards.
-- Identificação de diferenças restantes em relação ao Figma.
+- Configuração do `.gitignore`.
+- Exclusão dos relatórios temporários do versionamento.
+- Instalação do Vite 8.
+- Validação TypeScript.
+- Build de produção.
+- Reexecução da suíte de testes.
 
-#### Etapa 11.15 — Refinamento da agenda
+### Etapa 15 — Documentação e entrega
 
-- Remoção do resumo visual acima dos períodos.
-- Preservação das mensagens de estado vazio.
-- Manutenção da filtragem e da exclusão.
+**Status: Em finalização.**
 
----
-
-## 13. Etapa 12 — Testes funcionais manuais
-
-**Status:** 6 testes manuais aprovados conforme confirmação durante o desenvolvimento.
-
-**Data do registro:** 12/11/2026.
-
-**Ambiente:** HairDay executado no navegador, com React, TypeScript e Vite.
-
-### Teste 01 — Cadastro de agendamento
-
-**Resultado: APROVADO**
-
-Dados utilizados:
-
-- Cliente: Maria Silva.
-- Data: 12/11/2026.
-- Horário: 09:00.
-
-Verificações:
-
-- Cadastro realizado.
-- Atualização imediata da agenda.
-- Cliente exibida no período Manhã.
-- Horário apresentado corretamente.
-
-### Teste 02 — Exclusão de agendamento
-
-**Resultado: APROVADO**
-
-Verificações:
-
-- Exclusão de Maria Silva pelo botão de lixeira.
-- Remoção imediata da listagem.
-- Exibição da mensagem de período vazio.
-
-### Teste 03 — Filtro por data
-
-**Resultado: APROVADO**
-
-Dados utilizados:
-
-- Cliente: Ana Oliveira.
-- Data: 13/11/2026.
-- Horário: 14:00.
-
-Verificações:
-
-- Agendamento apresentado em 13/11/2026.
-- Alteração do filtro para 14/11/2026.
-- Agendamento ocultado na outra data.
-- Retorno para 13/11/2026.
-- Agendamento apresentado novamente.
-
-### Teste 04 — Nome obrigatório
-
-**Resultado: APROVADO**
-
-Procedimento:
-
-- Tentativa de cadastro sem preencher o nome.
-
-Verificações:
-
-- Mensagem "Informe o nome do cliente." exibida.
-- Cadastro impedido.
-
-### Teste 05 — Horário obrigatório
-
-**Resultado: APROVADO**
-
-Procedimento:
-
-- Cliente: Carlos Santos.
-- Data: 13/11/2026.
-- Horário não selecionado.
-
-Verificações:
-
-- Mensagem "Selecione um horário." exibida.
-- Cadastro impedido.
-
-### Teste 06 — Agrupamento por períodos
-
-**Resultado: APROVADO**
-
-Dados utilizados:
-
-| Cliente      | Horário | Período |
-| ------------ | ------- | ------- |
-| João Silva   | 10:00   | Manhã   |
-| Beatriz Lima | 16:00   | Tarde   |
-| Pedro Costa  | 20:00   | Noite   |
-| Ana Oliveira | 14:00   | Tarde   |
-
-Verificações:
-
-- Registros exibidos nos períodos correspondentes.
-- Agendamento de Ana Oliveira preservado.
-- Separação visual correta entre Manhã, Tarde e Noite.
-
-**Observação:** os seis resultados acima são testes manuais relatados durante o desenvolvimento. Não representam testes automatizados com Playwright.
+- Preparação do README.
+- Consolidação do SPEC.
+- Organização dos commits.
+- Revisão das pendências de evidências.
+- Preparação para entrega acadêmica.
 
 ---
 
-## 14. Checklist geral de desenvolvimento
+## 13. Testes manuais
 
-### Estrutura e tecnologia
+**Total: 11 testes informados como aprovados.**
 
-- [x] Criar projeto React + TypeScript com Vite 8.
-- [x] Criar repositório Git.
-- [x] Conectar ao GitHub.
-- [x] Criar AGENTS.md.
-- [x] Criar SPEC.md.
-- [x] Criar estrutura de componentes.
-- [x] Criar tipos TypeScript.
-- [x] Configurar horários e períodos.
-- [x] Implementar funções utilitárias.
+| ID   | Teste                                | Resultado                               |
+| ---- | ------------------------------------ | --------------------------------------- |
+| TM01 | Cadastro de agendamento              | Aprovado                                |
+| TM02 | Exclusão pela lixeira                | Aprovado                                |
+| TM03 | Filtro por data                      | Aprovado                                |
+| TM04 | Nome obrigatório                     | Aprovado                                |
+| TM05 | Horário obrigatório                  | Aprovado                                |
+| TM06 | Agrupamento por períodos             | Aprovado                                |
+| TM07 | Data obrigatória                     | Aprovado                                |
+| TM08 | Ordenação cronológica                | Aprovado                                |
+| TM09 | Visualização mobile                  | Aprovado conforme verificação informada |
+| TM10 | Exclusão sem afetar outros registros | Aprovado                                |
+| TM11 | Navegação por teclado                | Aprovado                                |
 
-### React e TypeScript
+Os resultados acima correspondem às verificações manuais confirmadas durante o desenvolvimento.
 
-- [x] Implementar useState.
+Não substituem auditorias formais de acessibilidade ou testes automatizados.
+
+---
+
+## 14. Testes automatizados com Playwright
+
+### 14.1 Ferramenta
+
+- Pacote: `@playwright/test`.
+- Versão utilizada: 1.65.0.
+- Navegador: Chromium.
+- Arquivo: `tests/hairday.spec.ts`.
+- Execução: um worker.
+
+### 14.2 Cenários executados
+
+| ID   | Teste                                     | Resultado |
+| ---- | ----------------------------------------- | --------- |
+| CT01 | Cadastrar e excluir agendamento           | Aprovado  |
+| CT02 | Exigir nome do cliente                    | Aprovado  |
+| CT03 | Exigir horário                            | Aprovado  |
+| CT04 | Exigir data                               | Aprovado  |
+| CT05 | Filtrar agendamentos por data             | Aprovado  |
+| CT06 | Organizar agendamentos por período        | Aprovado  |
+| CT07 | Ordenar horários cronologicamente         | Aprovado  |
+| CT08 | Excluir somente o agendamento selecionado | Aprovado  |
+| CT09 | Funcionar em tela mobile                  | Aprovado  |
+
+### 14.3 Execução
+
+Com a aplicação iniciada:
+
+```bash
+npm run dev
+```
+
+Em outro terminal:
+
+```bash
+npx playwright test tests/hairday.spec.ts --workers=1
+```
+
+### 14.4 Resultado final
+
+```text
+Running 9 tests using 1 worker
+
+9 passed (16.7s)
+```
+
+**Resultado: 100% dos nove testes automatizados aprovados na última execução informada.**
+
+### 14.5 Correção realizada durante os testes
+
+Durante a execução inicial, o teste CT08 apresentou erro de seletor por correspondência com mais de um elemento identificado pela palavra "Cliente".
+
+A seleção do campo foi refinada para utilizar a função `getByRole()` com o papel `textbox` e correspondência exata.
+
+Após essa correção, o CT08 passou, junto com os demais testes.
+
+### 14.6 Limitações dos testes
+
+Os nove testes confirmam os cenários implementados, mas não equivalem a uma cobertura completa da aplicação.
+
+O teste mobile verifica uma viewport de 390 × 844 pixels, o fluxo principal de cadastro e a ausência de rolagem horizontal.
+
+Não foi realizada uma auditoria automatizada completa de acessibilidade.
+
+---
+
+## 15. Validações técnicas
+
+### 15.1 TypeScript
+
+**Status: Aprovado.**
+
+Comando:
+
+```bash
+npx tsc -b
+```
+
+Execução concluída sem erros.
+
+### 15.2 Build
+
+**Status: Aprovado.**
+
+Comando:
+
+```bash
+npm run build
+```
+
+Resultado:
+
+```text
+vite v8.3.8 building client environment for production...
+
+✓ 2099 modules transformed.
+dist/index.html                   0.45 kB
+dist/assets/index-DEZafx1D.css   12.19 kB
+dist/assets/index-C0FW3cA9.js   233.34 kB
+
+✓ built in 2.13s
+```
+
+### 15.3 Compatibilidade
+
+Ambiente validado:
+
+- Node.js v24.19.0.
+- Vite v8.3.8.
+- Playwright v1.65.0.
+- Windows e PowerShell.
+
+### 15.4 Dependências
+
+A instalação apresentou sete alertas de vulnerabilidades de severidade moderada.
+
+**Status: Revisão pendente.**
+
+Os alertas não impediram a compilação nem a execução dos testes, mas devem ser avaliados separadamente com `npm audit`.
+
+Não foi executada uma atualização forçada das dependências para tentar eliminar esses alertas.
+
+---
+
+## 16. Evidências das ferramentas MCP
+
+### 16.1 Context7 MCP
+
+**Status: Evidência pendente.**
+
+O enunciado prevê a utilização do Context7 MCP para consultar a documentação das tecnologias utilizadas.
+
+Evidências a registrar após a utilização real:
+
+- Biblioteca consultada.
+- Tema pesquisado.
+- Resposta ou documentação retornada.
+- Captura ou registro da consulta.
+- Explicação de como a documentação contribuiu para o projeto.
+
+### 16.2 Playwright MCP
+
+**Status: Evidência pendente.**
+
+Foram executados nove testes automatizados com o pacote Playwright instalado no projeto.
+
+Essa execução não comprova, por si só, a utilização da ferramenta Playwright MCP.
+
+Caso o enunciado exija a ferramenta MCP especificamente, será necessário realizar e documentar a execução correspondente.
+
+### 16.3 Evidências visuais
+
+**Status: Capturas finais pendentes de organização.**
+
+Evidências recomendadas para a entrega:
+
+- Tela desktop da aplicação.
+- Tela mobile da aplicação.
+- Cadastro de um agendamento.
+- Agenda com registros nos três períodos.
+- Resultado dos nove testes Playwright.
+- Resultado do build de produção.
+
+---
+
+## 17. Acessibilidade
+
+### 17.1 Recursos implementados
+
+- Labels para os campos.
+- Elementos semânticos.
+- Botões com identificação acessível.
+- Navegação por teclado.
+- Estados de foco visíveis.
+- Mensagens de validação.
+- Uso de atributos ARIA.
+- Suporte a movimento reduzido.
+
+### 17.2 Validação manual
+
+A navegação por teclado foi verificada manualmente e informada como funcional.
+
+### 17.3 Pendências
+
+- Auditoria de contraste.
+- Verificação sistemática com leitor de tela.
+- Auditoria automatizada de acessibilidade.
+- Revisão de diferentes larguras e configurações de zoom.
+
+---
+
+## 18. Funcionalidades opcionais
+
+As funcionalidades abaixo não são exigidas para a versão básica do HairDay:
+
+- Persistência de agendamentos com localStorage.
+- Bloqueio de horários duplicados.
+- Integração com backend.
+- Banco de dados.
+- Autenticação.
+- Personalização visual adicional.
+
+Essas funcionalidades não fazem parte do escopo implementado e validado nesta versão.
+
+---
+
+## 19. Regras de desenvolvimento
+
+Durante o desenvolvimento foram adotadas as seguintes orientações:
+
+1. Desenvolver por etapas.
+2. Organizar o código em componentes reutilizáveis.
+3. Utilizar TypeScript e Props tipadas.
+4. Preservar as funcionalidades existentes.
+5. Seguir o protótipo do Figma.
+6. Aplicar React Hooks e Context API.
+7. Manter documentação técnica.
+8. Validar TypeScript e build.
+9. Executar testes funcionais.
+10. Realizar commits descritivos.
+11. Enviar alterações ao GitHub.
+12. Não registrar testes como aprovados sem execução.
+13. Diferenciar o uso de Playwright convencional das ferramentas MCP.
+14. Evitar alterações desnecessárias fora do escopo.
+
+---
+
+## 20. Checklist final
+
+### Projeto
+
+- [x] Criar aplicação React.
+- [x] Utilizar TypeScript.
+- [x] Atualizar para Vite 8.
+- [x] Organizar componentes.
+- [x] Criar tipos e constantes.
+- [x] Criar funções utilitárias.
 - [x] Implementar Context API.
-- [x] Implementar AppointmentProvider.
-- [x] Criar Hook useAppointments.
-- [x] Utilizar Props tipadas.
-- [x] Utilizar map().
-- [x] Utilizar filter().
-- [x] Utilizar reduce().
-- [x] Implementar ordenação cronológica no código.
+- [x] Implementar Provider.
+- [x] Implementar Hook personalizado.
+- [x] Utilizar Props.
+- [x] Utilizar `map()`.
+- [x] Utilizar `filter()`.
+- [x] Utilizar `reduce()`.
 
 ### Funcionalidades
 
-- [x] Implementar cadastro.
-- [x] Implementar listagem.
-- [x] Implementar filtro por data.
-- [x] Implementar agrupamento por períodos.
-- [x] Implementar exclusão.
-- [x] Implementar mensagens de período vazio.
-- [x] Validar cadastro manualmente.
-- [x] Validar exclusão manualmente.
-- [x] Validar filtro por data manualmente.
+- [x] Cadastrar agendamentos.
 - [x] Validar nome obrigatório.
+- [x] Validar data obrigatória.
 - [x] Validar horário obrigatório.
-- [x] Validar agrupamento por períodos.
-- [ ] Testar data obrigatória.
-- [ ] Testar datas inválidas e restrições.
-- [ ] Testar ordenação com vários agendamentos.
-- [ ] Confirmar preservação de outros registros após exclusão.
+- [x] Exibir agendamentos.
+- [x] Filtrar por data.
+- [x] Agrupar por períodos.
+- [x] Ordenar por horário.
+- [x] Excluir individualmente.
+- [x] Exibir mensagens de estado vazio.
 
 ### Interface
 
 - [x] Criar Sidebar.
-- [x] Criar formulário.
 - [x] Criar área da agenda.
-- [x] Criar cards de períodos.
-- [x] Aplicar identidade dourada e grafite.
-- [x] Adicionar ícones Lucide React.
-- [x] Adicionar marca HairDay.
-- [x] Posicionar calendário à direita no desktop.
+- [x] Criar cards dos períodos.
+- [x] Aplicar identidade visual grafite e dourada.
+- [x] Integrar ícones Lucide React.
+- [x] Incluir identidade HairDay.
 - [x] Implementar regras responsivas.
-- [ ] Validar versão mobile visualmente.
-- [ ] Conferir fidelidade final ao Figma.
-- [ ] Revisar acessibilidade.
+- [x] Testar viewport mobile com Playwright.
+- [ ] Concluir comparação visual detalhada com o Figma.
+- [ ] Organizar capturas finais desktop e mobile.
 
-### Ferramentas e testes
+### Testes
 
-- [x] Utilizar ChatGPT no desenvolvimento.
-- [x] Realizar testes manuais.
-- [ ] Registrar consulta real ao Context7 MCP.
-- [ ] Executar testes com Playwright MCP.
-- [ ] Salvar evidências das ferramentas.
-- [ ] Conferir erros do console.
-- [ ] Executar revisão final do build.
+- [x] Executar testes manuais dos fluxos principais.
+- [x] Instalar Playwright.
+- [x] Instalar Chromium.
+- [x] Criar nove testes automatizados.
+- [x] Executar nove testes com sucesso.
+- [x] Validar TypeScript.
+- [x] Validar build Vite 8.
+- [ ] Executar e documentar consulta ao Context7 MCP.
+- [ ] Executar e documentar uso do Playwright MCP.
+- [ ] Realizar auditoria completa de acessibilidade.
+- [ ] Revisar alertas de dependências.
 
-### Entrega
+### Documentação e entrega
 
-- [ ] Finalizar README.md.
-- [ ] Revisar AGENTS.md.
-- [ ] Finalizar SPEC.md.
-- [ ] Capturar tela desktop final.
-- [ ] Capturar tela mobile final.
-- [ ] Confirmar histórico de commits.
-- [ ] Conferir repositório GitHub.
-- [ ] Enviar link e evidências pelo Blackboard.
-
----
-
-## 15. Testes automatizados planejados
-
-Os testes devem ser executados com Playwright MCP.
-
-### Cenários previstos
-
-**CT01 — Inicialização**
-
-Verificar se a aplicação abre sem erros.
-
-**CT02 — Cadastro válido**
-
-Cadastrar cliente com nome, data e horário e verificar atualização imediata.
-
-**CT03 — Nome obrigatório**
-
-Verificar se um nome vazio impede o cadastro.
-
-**CT04 — Horário obrigatório**
-
-Verificar se um horário não selecionado impede o cadastro.
-
-**CT05 — Data obrigatória**
-
-Verificar se a ausência de data impede o cadastro.
-
-**CT06 — Filtro por data**
-
-Verificar se somente os agendamentos do dia selecionado aparecem.
-
-**CT07 — Agrupamento por períodos**
-
-Verificar se os registros aparecem nos períodos corretos.
-
-**CT08 — Ordenação cronológica**
-
-Cadastrar registros fora de ordem e verificar a apresentação cronológica.
-
-**CT09 — Exclusão individual**
-
-Excluir um registro e verificar que os demais permanecem.
-
-**CT10 — Estados vazios**
-
-Verificar a mensagem obrigatória nos períodos sem agendamentos.
-
-**CT11 — Responsividade**
-
-Validar a aplicação em viewport desktop e mobile.
-
-**CT12 — Console do navegador**
-
-Verificar a ausência de erros durante os fluxos principais.
-
-**Status:** planejamento concluído; execução automatizada pendente.
-
-Nenhum teste automatizado deve ser considerado aprovado antes de sua execução real.
+- [x] Criar AGENTS.md.
+- [x] Criar README.md.
+- [x] Criar SPEC.md.
+- [x] Organizar histórico de desenvolvimento.
+- [x] Documentar os testes automatizados.
+- [x] Preparar atualização final do SPEC.md.
+- [ ] Confirmar commit e push desta versão do SPEC.md.
+- [ ] Conferir evidências exigidas pelo enunciado.
+- [ ] Confirmar entrega final no GitHub.
+- [ ] Enviar a atividade no Blackboard.
 
 ---
 
-## 16. Acessibilidade
+## 21. Situação final do projeto
 
-### Recursos implementados
+O HairDay possui as principais funcionalidades acadêmicas implementadas:
 
-- Elementos HTML semânticos.
-- Labels associados aos campos.
-- Descrições acessíveis para botões de exclusão.
-- Estados de foco visíveis.
-- Atributos `aria-label`.
-- Uso de `aria-invalid` nas validações.
-- Mensagens de erro com `role="alert"`.
-- Mensagens de sucesso com `role="status"`.
-- Suporte à preferência por movimento reduzido.
-- Botões de horários com `aria-pressed`.
+- Cadastro.
+- Listagem.
+- Validação.
+- Filtro.
+- Agrupamento.
+- Ordenação.
+- Exclusão.
 
-### Validações pendentes
+A aplicação utiliza React, TypeScript, Vite 8, Hooks, Context API e componentes reutilizáveis.
 
-- [ ] Testar navegação completa por teclado.
-- [ ] Verificar contraste de cores.
-- [ ] Testar mensagens com leitor de tela.
-- [ ] Verificar nomes acessíveis dos controles.
-- [ ] Conferir responsividade sem rolagem horizontal.
+O projeto passou por testes manuais e por uma suíte automatizada com Playwright.
 
----
+### Resultados confirmados
 
-## 17. Funcionalidades opcionais
+| Indicador                       | Resultado                             |
+| ------------------------------- | ------------------------------------- |
+| Testes manuais informados       | 11 aprovados                          |
+| Testes automatizados Playwright | 9 aprovados                           |
+| TypeScript                      | Aprovado                              |
+| Build de produção               | Aprovado                              |
+| Vite                            | 8.3.8                                 |
+| Playwright                      | 1.65.0                                |
+| Viewport mobile automatizada    | 390 × 844 px                          |
+| README                          | Preparado e informado como finalizado |
+| Repositório GitHub              | Configurado e utilizado               |
 
-As funcionalidades abaixo não fazem parte do escopo mínimo obrigatório:
+### Pendências antes da entrega acadêmica
 
-- Persistência em localStorage.
-- Bloqueio de horários duplicados.
-- Personalização adicional da identidade visual.
+1. Confirmar as evidências exigidas de Context7 MCP.
+2. Confirmar as evidências exigidas de Playwright MCP.
+3. Organizar capturas desktop e mobile.
+4. Revisar os alertas de dependências.
+5. Realizar a conferência final do GitHub e da documentação.
 
-Sua implementação poderá ser avaliada após a conclusão dos requisitos obrigatórios.
-
----
-
-## 18. Regras de desenvolvimento
-
-Durante a construção do HairDay, seguir:
-
-1. Desenvolver um arquivo de código por vez.
-2. Enviar arquivos completos.
-3. Preservar funcionalidades já implementadas.
-4. Manter código simples, organizado e tipado.
-5. Atualizar SPEC.md em cada etapa.
-6. Executar as verificações adequadas antes dos commits.
-7. Criar commits com mensagens descritivas.
-8. Enviar alterações ao GitHub após validação.
-9. Não afirmar que testes passaram sem execução.
-10. Seguir os requisitos do professor e o Board do Notion.
-11. Preservar a acessibilidade e a responsividade.
-12. Não adicionar backend ou funcionalidades desnecessárias.
-
----
-
-## 19. Pendências para finalização
-
-### Prioridade 1 — Validação funcional
-
-- Testar data obrigatória.
-- Verificar comportamento de datas inválidas.
-- Confirmar ordenação cronológica.
-- Revisar exclusão com múltiplos registros.
-
-### Prioridade 2 — Interface
-
-- Validar a versão mobile.
-- Comparar os últimos detalhes com o Figma.
-- Revisar acessibilidade.
-
-### Prioridade 3 — Ferramentas
-
-- Consultar a documentação utilizando Context7 MCP.
-- Executar testes automatizados com Playwright MCP.
-- Registrar evidências reais das duas ferramentas.
-
-### Prioridade 4 — Documentação e entrega
-
-- Finalizar README.md.
-- Revisar AGENTS.md.
-- Atualizar SPEC.md após os testes restantes.
-- Capturar telas desktop e mobile.
-- Conferir repositório e commits.
-- Preparar a entrega no Blackboard.
-
----
-
-## 20. Situação atual
-
-**Última etapa registrada:** Etapa 12 — Testes funcionais manuais.
-
-**Resultados conhecidos:**
-
-- Seis testes manuais aprovados conforme confirmação durante o desenvolvimento.
-- Estrutura principal da aplicação implementada.
-- Interface desktop revisada visualmente.
-- Cadastro, filtro e exclusão operacionais nos cenários manuais testados.
-- Context API, Hooks, Props e TypeScript aplicados.
-
-**Ainda pendente:**
-
-- Testes automatizados com Playwright.
-- Evidências de Context7 MCP.
-- Revisão mobile e acessibilidade.
-- Testes funcionais complementares.
-- Finalização do README e documentação de entrega.
-
-### Próxima etapa — 12.8
-
-Executar o teste de data obrigatória, registrar o resultado real e continuar a validação do HairDay antes da entrega final.
+**Conclusão:** o núcleo funcional do HairDay está implementado e os nove cenários automatizados passaram. A entrega acadêmica depende da organização das evidências e da revisão das pendências documentadas.
 
 ---
 
 **HairDay — Projeto 04 | Single Page Application (SPA)**
 
-**Documentação consolidada em 12/11/2026.**
+**Documentação técnica consolidada em 12/11/2026.**
