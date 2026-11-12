@@ -1,24 +1,54 @@
-/* ========================================
-   HairDay — Sidebar
-======================================== */
+/* ==========================================
+   HairDay - Sidebar
+========================================== */
 
 .schedule-sidebar {
   width: 100%;
   min-width: 0;
   min-height: 100vh;
   flex-shrink: 0;
-  background-color: var(--color-sidebar);
-  color: var(--color-text);
+  background-color: var(--color-sidebar, #252429);
+  color: var(--color-text, #f5f4f5);
 }
 
 .schedule-sidebar__content {
   width: 100%;
   max-width: 420px;
   margin: 0 auto;
-  padding: 64px 40px 48px;
+  padding: 40px 32px 48px;
 }
 
-/* Cabeçalho */
+/* ==========================================
+   Logo HairDay
+========================================== */
+
+.schedule-sidebar__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: fit-content;
+  margin-bottom: 64px;
+}
+
+.schedule-sidebar__brand svg {
+  flex-shrink: 0;
+}
+
+.schedule-sidebar__brand-name {
+  color: var(--color-text, #f5f4f5);
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.2;
+}
+
+.schedule-sidebar__brand-name span {
+  color: var(--color-primary, #b8952e);
+}
+
+/* ==========================================
+   Cabecalho
+========================================== */
 
 .schedule-sidebar__header {
   display: flex;
@@ -29,22 +59,23 @@
 
 .schedule-sidebar__title {
   margin: 0;
-  color: var(--color-text);
-  font-size: 20px;
+  color: var(--color-text, #f5f4f5);
+  font-size: 21px;
   font-weight: 700;
   line-height: 1.35;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
 }
 
 .schedule-sidebar__description {
   margin: 0;
-  color: var(--color-text-muted);
+  color: var(--color-text-muted, #a7a4ae);
   font-size: 13px;
-  font-weight: 400;
   line-height: 1.6;
 }
 
-/* Área do formulário */
+/* ==========================================
+   Formulario
+========================================== */
 
 .schedule-sidebar__form {
   display: flex;
@@ -53,7 +84,9 @@
   width: 100%;
 }
 
-/* Desktop */
+/* ==========================================
+   Desktop
+========================================== */
 
 @media (min-width: 1024px) {
   .schedule-sidebar {
@@ -62,7 +95,9 @@
   }
 }
 
-/* Tablet */
+/* ==========================================
+   Tablet
+========================================== */
 
 @media (min-width: 601px) and (max-width: 1023px) {
   .schedule-sidebar {
@@ -71,11 +106,17 @@
 
   .schedule-sidebar__content {
     max-width: 600px;
-    padding: 40px 32px;
+    padding: 32px;
+  }
+
+  .schedule-sidebar__brand {
+    margin-bottom: 40px;
   }
 }
 
-/* Celular */
+/* ==========================================
+   Mobile
+========================================== */
 
 @media (max-width: 600px) {
   .schedule-sidebar {
@@ -83,24 +124,29 @@
   }
 
   .schedule-sidebar__content {
-    padding: 32px 24px;
+    padding: 28px 24px 36px;
   }
 
-  .schedule-sidebar__header {
-    margin-bottom: 28px;
+  .schedule-sidebar__brand {
+    gap: 10px;
+    margin-bottom: 36px;
+  }
+
+  .schedule-sidebar__brand-name {
+    font-size: 23px;
   }
 
   .schedule-sidebar__title {
     font-size: 19px;
   }
 
-  .schedule-sidebar__description {
-    font-size: 13px;
+  .schedule-sidebar__header {
+    margin-bottom: 28px;
   }
 }
 
 @media (max-width: 380px) {
   .schedule-sidebar__content {
-    padding: 28px 16px;
+    padding: 24px 16px 32px;
   }
 }
