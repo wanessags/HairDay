@@ -15,23 +15,8 @@ export function AppointmentList() {
     [appointments, selectedDate],
   );
 
-  const totalAppointments = SCHEDULE_PERIODS.reduce(
-    (total, period) => total + appointmentsByPeriod[period.id].length,
-    0,
-  );
-
   return (
-    <div className="appointment-list">
-      <p className="appointment-list__summary" role="status">
-        {totalAppointments === 0
-          ? "Nenhum agendamento para a data selecionada."
-          : `${totalAppointments} ${
-              totalAppointments === 1
-                ? "agendamento encontrado"
-                : "agendamentos encontrados"
-            }.`}
-      </p>
-
+    <div className="appointment-list" aria-label="Lista de agendamentos">
       <div className="appointment-list__periods">
         {SCHEDULE_PERIODS.map((period) => (
           <PeriodSection
