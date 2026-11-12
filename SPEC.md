@@ -5,22 +5,36 @@
 **Projeto:** HairDay — Sistema de Agendamentos  
 **Disciplina:** Single Page Application (SPA)  
 **Tecnologias:** React, Vite 8, TypeScript e CSS  
+**Biblioteca de ícones:** Lucide React  
 **Ferramentas:** ChatGPT, Figma, Context7 MCP e Playwright MCP  
-**Status:** Em desenvolvimento
+**Repositório:** https://github.com/wanessags/HairDay  
+**Status:** Em desenvolvimento — fase de testes e revisão final
+
+---
 
 ## 2. Objetivo
 
-Desenvolver uma aplicação web responsiva para gerenciamento
-de agendamentos de salões de beleza e barbearias.
+Desenvolver uma aplicação web responsiva para gerenciamento de agendamentos de salões de beleza e barbearias, reproduzindo a interface disponibilizada no Figma.
 
-A aplicação deve reproduzir o protótipo do Figma e permitir
-cadastrar, visualizar, filtrar e excluir agendamentos.
+A aplicação permite cadastrar, visualizar, filtrar e excluir agendamentos, organizando os atendimentos por data e período.
 
-O desenvolvimento será realizado por etapas, aplicando
-componentização, Props, Hooks, Context API, TypeScript
-e manipulação de arrays.
+O projeto aplica conceitos de:
 
-## 3. Referências
+- Componentização e reutilização de componentes.
+- Props tipadas com TypeScript.
+- Hooks do React.
+- Gerenciamento de estado com `useState`.
+- Context API e Provider.
+- Manipulação de arrays com `map()`, `filter()` e `reduce()`.
+- Validação de formulários.
+- Desenvolvimento assistido por Inteligência Artificial.
+- Responsividade e acessibilidade.
+
+O desenvolvimento é realizado por etapas, mantendo documentação, testes e commits organizados.
+
+---
+
+## 3. Referências oficiais
 
 ### Notion — Enunciado e Board
 
@@ -34,95 +48,186 @@ https://www.figma.com/design/0UAXn1uIaIWTUDnBj1Tzct/Plataforma-de-agendamento--C
 
 https://github.com/wanessags/HairDay
 
-## 4. Tecnologias obrigatórias
+---
 
-- React
-- Vite 8
-- TypeScript
-- CSS
-- Hooks
-- Context API
-- Providers
-- Props
-- useState
-- map()
-- filter()
-- reduce()
+## 4. Tecnologias utilizadas
+
+| Tecnologia     | Finalidade                              |
+| -------------- | --------------------------------------- |
+| React          | Desenvolvimento da interface            |
+| Vite 8         | Ambiente de desenvolvimento e build     |
+| TypeScript     | Tipagem estática                        |
+| CSS            | Estilização e responsividade            |
+| Lucide React   | Ícones da aplicação                     |
+| Context API    | Compartilhamento de estado              |
+| React Hooks    | Gerenciamento de estado e comportamento |
+| Git            | Versionamento                           |
+| GitHub         | Hospedagem do código-fonte              |
+| ChatGPT        | Desenvolvimento assistido por IA        |
+| Figma          | Referência de design                    |
+| Context7 MCP   | Consulta de documentação                |
+| Playwright MCP | Testes automatizados                    |
+
+**Observação:** Context7 MCP e Playwright MCP fazem parte das ferramentas previstas no projeto, mas suas utilizações ainda precisam ser executadas e documentadas com evidências.
+
+---
 
 ## 5. Requisitos funcionais
 
-### RF01 — Cadastrar agendamentos
+### RF01 — Cadastro de agendamentos
 
-Permitir o cadastro informando:
+**Status:** Implementado e aprovado em teste manual.
+
+A aplicação deve permitir cadastrar agendamentos informando:
 
 - Nome do cliente.
-- Data do agendamento.
+- Data do atendimento.
 - Horário do atendimento.
 
-Após o cadastro, atualizar imediatamente a interface.
+Após o cadastro, a agenda deve ser atualizada imediatamente, sem recarregar a página.
 
-### RF02 — Validar formulário
+### RF02 — Validação do formulário
 
-Não permitir agendamentos com campos obrigatórios vazios.
+**Status:** Parcialmente validado.
 
-Exibir orientações claras quando o formulário estiver inválido.
+O formulário deve:
 
-### RF03 — Listar agendamentos
+- Impedir cadastro sem nome do cliente.
+- Impedir cadastro sem horário.
+- Impedir cadastro sem data.
+- Apresentar mensagens claras de erro.
+- Exibir confirmação após cadastro válido.
 
-Exibir os agendamentos cadastrados com:
+**Testes aprovados:** nome obrigatório e horário obrigatório.
+
+**Pendente:** teste de data obrigatória e revisão de datas inválidas.
+
+### RF03 — Listagem de agendamentos
+
+**Status:** Implementado e validado parcialmente.
+
+Cada agendamento deve apresentar:
 
 - Horário.
 - Nome do cliente.
-- Botão para excluir.
+- Ícone de lixeira para exclusão.
 
-### RF04 — Filtrar por data
+Os registros devem aparecer na data e no período correspondentes.
 
-Permitir selecionar uma data e visualizar somente
-os agendamentos correspondentes.
+### RF04 — Filtro por data
 
-### RF05 — Organizar por períodos
+**Status:** Implementado e aprovado em teste manual.
 
-Os agendamentos devem ser agrupados em:
+O calendário da agenda permite selecionar uma data e visualizar somente os agendamentos correspondentes.
 
-**Manhã:** 09:00 às 12:00.
+Alterar a data não deve excluir nem modificar os registros.
 
-**Tarde:** 13:00 às 18:00.
+### RF05 — Agrupamento por períodos
 
-**Noite:** 19:00 às 21:00.
+**Status:** Implementado e aprovado em teste manual.
 
-Os horários devem aparecer em ordem cronológica.
+Os agendamentos devem ser organizados em:
 
-### RF06 — Excluir agendamentos
+| Período | Horários       |
+| ------- | -------------- |
+| Manhã   | 09:00 às 12:00 |
+| Tarde   | 13:00 às 18:00 |
+| Noite   | 19:00 às 21:00 |
 
-Permitir excluir individualmente um agendamento.
+Os registros devem aparecer em ordem cronológica.
 
-A exclusão deve atualizar imediatamente a interface,
-sem remover outros registros.
+**Pendente:** teste específico de ordenação com múltiplos registros fora de ordem.
+
+### RF06 — Exclusão de agendamentos
+
+**Status:** Implementado e aprovado em teste manual.
+
+O sistema deve excluir somente o agendamento selecionado pelo botão de lixeira.
+
+A exclusão deve atualizar imediatamente a interface.
 
 ### RF07 — Estados vazios
 
-Quando não houver agendamentos em determinado período,
-exibir exatamente:
+**Status:** Implementado e observado no teste manual de exclusão.
 
-"Você ainda não tem agendamentos cadastrados nesse período."
+Quando um período não possuir agendamentos, deve aparecer exatamente:
+
+> Você ainda não tem agendamentos cadastrados nesse período.
+
+### RF08 — Gerenciamento em memória
+
+**Status:** Implementado.
+
+Os agendamentos são armazenados no estado do React durante a utilização da aplicação.
+
+Não é necessário backend, banco de dados ou autenticação.
+
+Os dados não possuem persistência obrigatória após recarregar a página.
+
+---
 
 ## 6. Requisitos de interface
 
-- Reproduzir o protótipo oficial do Figma.
-- Sidebar de agendamento à esquerda no desktop.
-- Agenda de atendimentos à direita.
-- Layout responsivo para desktop e mobile.
-- Componentes visuais reutilizáveis.
-- Campos identificados com labels.
-- Botões acessíveis por teclado.
-- Interface organizada e legível.
+A interface deve reproduzir visualmente o Figma do HairDay.
 
-## 7. Modelo de dados
+### Sidebar
 
-Cada agendamento utilizará o tipo TypeScript:
+- Identidade visual HairDay.
+- Ícone de tesoura.
+- Título de agendamento.
+- Descrição do formulário.
+- Campo de data com ícone.
+- Horários disponíveis.
+- Campo Cliente com ícone.
+- Botão AGENDAR.
 
-```ts
-type Appointment = {
+### Agenda
+
+- Título "Sua agenda".
+- Descrição dos atendimentos.
+- Filtro de data.
+- Seção Manhã.
+- Seção Tarde.
+- Seção Noite.
+- Ícones correspondentes aos períodos.
+- Linhas de agendamentos.
+- Ícones de exclusão.
+- Mensagens de períodos vazios.
+
+### Identidade visual
+
+- Fundo em tons de grafite.
+- Destaques dourados.
+- Bordas discretas.
+- Tipografia legível.
+- Ícones Lucide React.
+- Layout organizado e responsivo.
+
+**Situação:** interface desktop visualmente revisada com capturas de tela. Fidelidade exata ao Figma ainda não confirmada.
+
+### Responsividade
+
+A interface deve funcionar em:
+
+- Desktop.
+- Notebook.
+- Tablet.
+- Celular.
+
+No desktop, a Sidebar aparece à esquerda e a agenda à direita.
+
+Em dispositivos menores, o layout deve se reorganizar verticalmente.
+
+**Status:** regras responsivas implementadas; testes visuais mobile pendentes.
+
+---
+
+## 7. Modelo de dados TypeScript
+
+Cada agendamento utiliza a estrutura:
+
+```typescript
+export type Appointment = {
   id: string;
   clientName: string;
   date: string;
@@ -130,1325 +235,714 @@ type Appointment = {
 };
 ```
 
-Os agendamentos serão gerenciados inicialmente
-em memória utilizando o estado do React.
+Tipos auxiliares:
 
-Não será necessário desenvolver backend,
-banco de dados ou autenticação.
+```typescript
+export type Period = "morning" | "afternoon" | "evening";
 
-## 8. Estrutura planejada
+export type AppointmentFormData = Omit<Appointment, "id">;
+
+export type AppointmentsByPeriod = Record<Period, Appointment[]>;
+```
+
+### Descrição
+
+- `id`: identificador único do agendamento.
+- `clientName`: nome do cliente.
+- `date`: data do atendimento.
+- `time`: horário selecionado.
+- `Period`: período correspondente.
+- `AppointmentFormData`: dados utilizados no cadastro.
+- `AppointmentsByPeriod`: agrupamento dos atendimentos.
+
+---
+
+## 8. Estrutura do projeto
 
 ```text
-src/
-├── assets/
-├── components/
-│   ├── AppointmentForm/
-│   ├── AppointmentItem/
-│   ├── AppointmentList/
-│   ├── DateFilter/
-│   ├── PeriodSection/
-│   └── ScheduleSidebar/
-├── constants/
-│   └── schedule.ts
-├── contexts/
-│   └── AppointmentContext.tsx
-├── hooks/
-│   └── useAppointments.ts
-├── types/
-│   └── appointment.ts
-├── utils/
-│   └── appointmentUtils.ts
-├── App.tsx
-├── App.css
-├── index.css
-└── main.tsx
+hairday/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   ├── AppointmentForm/
+│   │   │   ├── AppointmentForm.tsx
+│   │   │   └── AppointmentForm.css
+│   │   ├── AppointmentItem/
+│   │   │   ├── AppointmentItem.tsx
+│   │   │   └── AppointmentItem.css
+│   │   ├── AppointmentList/
+│   │   │   ├── AppointmentList.tsx
+│   │   │   └── AppointmentList.css
+│   │   ├── DateFilter/
+│   │   │   ├── DateFilter.tsx
+│   │   │   └── DateFilter.css
+│   │   ├── PeriodSection/
+│   │   │   ├── PeriodSection.tsx
+│   │   │   └── PeriodSection.css
+│   │   └── ScheduleSidebar/
+│   │       ├── ScheduleSidebar.tsx
+│   │       └── ScheduleSidebar.css
+│   ├── constants/
+│   │   └── schedule.ts
+│   ├── contexts/
+│   │   └── AppointmentContext.tsx
+│   ├── hooks/
+│   │   └── useAppointments.ts
+│   ├── types/
+│   │   └── appointment.ts
+│   ├── utils/
+│   │   └── appointmentUtils.ts
+│   ├── App.tsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.tsx
+├── AGENTS.md
+├── SPEC.md
+├── README.md
+├── package.json
+├── package-lock.json
+├── index.html
+└── vite.config.ts
 ```
+
+---
 
 ## 9. Componentização
 
 ### ScheduleSidebar
 
-Responsável pela área lateral de agendamento.
+Responsável pela área lateral da aplicação.
+
+Contém a identidade HairDay, o título e o formulário recebido por `children`.
+
+Utiliza Props tipadas com `ReactNode`.
 
 ### AppointmentForm
 
-Formulário de cadastro e validação.
+Responsável pelo cadastro dos agendamentos.
 
-### AppointmentList
+Utiliza:
 
-Listagem de agendamentos da data selecionada.
+- `useState`.
+- `useAppointments`.
+- Eventos de formulário.
+- Validação de campos.
+- Seleção de horários.
+- Mensagens de erro e sucesso.
 
 ### AppointmentItem
 
-Representação visual de um agendamento.
+Representa um agendamento individual.
+
+Recebe Props tipadas e utiliza o callback `onDelete` para solicitar a exclusão pelo ID.
+
+### AppointmentList
+
+Responsável pela listagem dos agendamentos da data selecionada.
+
+Utiliza `useMemo`, Context API, funções utilitárias e renderização de períodos com `map()`.
 
 ### PeriodSection
 
-Agrupamento dos agendamentos por período.
+Responsável pela apresentação de um período.
+
+Exibe:
+
+- Ícone.
+- Título.
+- Intervalo de horários.
+- Lista de agendamentos.
+- Mensagem de estado vazio.
 
 ### DateFilter
 
-Seleção da data exibida na agenda.
+Responsável pelo calendário da agenda.
+
+Utiliza o contexto para acessar e modificar a data selecionada.
+
+---
 
 ## 10. Gerenciamento de estado
 
-Utilizar:
+O gerenciamento de estado utiliza:
 
-- useState para armazenar agendamentos.
-- Context API para compartilhar dados.
-- Provider para disponibilizar o contexto.
-- Hook personalizado para consumir o contexto.
-- Props para comunicação entre componentes.
+- `useState`.
+- `useContext`.
+- `useCallback`.
+- `useMemo`.
+- Context API.
+- AppointmentProvider.
+- Hook personalizado `useAppointments`.
 
-Nunca modificar diretamente o estado do React.
+### AppointmentContext
+
+Centraliza:
+
+- Lista de agendamentos.
+- Data selecionada.
+- Função de cadastro.
+- Função de exclusão.
+- Atualização da data.
+
+### AppointmentProvider
+
+Disponibiliza os dados aos componentes da aplicação.
+
+O Provider está integrado ao `main.tsx`.
+
+### useAppointments
+
+Hook responsável por consumir o contexto.
+
+Permite aos componentes acessar os dados sem duplicar o gerenciamento de estado.
+
+---
 
 ## 11. Manipulação de arrays
 
 ### map()
 
-Renderizar componentes e horários disponíveis.
+Utilizado para renderizar:
+
+- Horários disponíveis.
+- Períodos da agenda.
+- Agendamentos individuais.
 
 ### filter()
 
-Filtrar agendamentos por data e remover registros.
+Utilizado para:
+
+- Filtrar agendamentos por data.
+- Remover agendamentos pelo identificador.
 
 ### reduce()
 
-Agrupar agendamentos nos períodos da agenda.
+Utilizado para agrupar os agendamentos por período.
 
-## 12. Testes e validações
+### sort()
 
-Validar:
+Utilizado para organizar os registros cronologicamente.
 
-- Inicialização da aplicação.
-- Cadastro de agendamento.
-- Atualização imediata da lista.
-- Validação dos campos obrigatórios.
-- Filtro por data.
-- Agrupamento por períodos.
-- Ordenação cronológica.
-- Mensagens de estado vazio.
-- Exclusão individual.
-- Responsividade desktop e mobile.
-- Ausência de erros no console.
+### flatMap()
 
-Registrar evidências de execução real
-do Playwright MCP e consulta ao Context7 MCP.
+Utilizado para reunir os horários disponíveis dos três períodos.
 
-## 13. Etapas de desenvolvimento
+---
 
-- [x] Criar projeto React + TypeScript com Vite 8.
-- [x] Criar estrutura de pastas e arquivos.
-- [x] Criar AGENTS.md.
-- [ ] Finalizar e versionar SPEC.md.
-- [ ] Analisar e implementar a interface do Figma.
-- [ ] Criar tipos TypeScript.
-- [ ] Configurar horários e períodos.
-- [ ] Criar funções utilitárias.
-- [ ] Implementar Context API e Provider.
-- [ ] Criar Hook de agendamentos.
-- [ ] Implementar formulário.
-- [ ] Implementar listagem por data.
-- [ ] Implementar agrupamento por períodos.
-- [ ] Implementar exclusão.
-- [ ] Validar responsividade.
-- [ ] Executar testes com Playwright.
-- [ ] Registrar evidências do Context7.
-- [ ] Finalizar README.
-- [ ] Capturar telas desktop e mobile.
-- [ ] Publicar versão final no GitHub.
+## 12. Histórico de desenvolvimento
 
-## 14. Funcionalidades opcionais
+### Etapa 01 — Preparação do projeto
 
-- Persistência usando localStorage.
-- Bloqueio de horários duplicados.
-- Personalização adicional da interface.
+**Status:** Implementado.
 
-Essas funcionalidades somente serão implementadas
-após a conclusão dos requisitos obrigatórios.
-
-## 15. Regras de desenvolvimento
-
-- Desenvolver uma etapa por vez.
-- Manter arquivos completos e organizados.
-- Preservar funcionalidades existentes.
-- Atualizar SPEC.md em cada etapa.
-- Validar antes de realizar commits.
-- Criar um commit por etapa concluída.
-- Não declarar testes aprovados sem executá-los.
-- Seguir o Board do Notion.
-
-## 16. Histórico de desenvolvimento
-
-### Etapa 01 — Preparação
-
-**Status:** Estrutura criada; validação e versionamento pendentes.
-
-Atividades:
-
-- Criação do projeto com React, TypeScript e Vite 8.
+- Criação do projeto React com TypeScript e Vite 8.
+- Inicialização do Git.
+- Configuração do repositório GitHub.
 - Criação do AGENTS.md.
-- Organização das pastas e arquivos.
 - Preparação do SPEC.md.
-
-### Próxima etapa
-
-Implementar os tipos TypeScript e as constantes
-de horários, mantendo a documentação atualizada.
+- Criação da estrutura de pastas.
 
 ### Etapa 02 — Tipos TypeScript
 
-**Status:** Implementado; aguardando validação e commit.
+**Status:** Implementado.
 
-Atividades:
+- Criação de Appointment.
+- Definição de Period.
+- Criação de AppointmentFormData.
+- Criação de AppointmentsByPeriod.
 
-- Criação do tipo Appointment.
-- Definição dos períodos morning, afternoon e evening.
-- Criação do tipo AppointmentFormData.
-- Criação do agrupamento AppointmentsByPeriod.
+### Etapa 03 — Horários disponíveis
 
-Validação:
+**Status:** Implementado.
 
-- Compilação TypeScript com `npx tsc -b`.
-
-### Próxima etapa
-
-Implementar as constantes de horários e períodos.
-
-### Etapa 03 — Horários e períodos
-
-**Status:** Implementado; aguardando validação e commit.
-
-**Arquivo:** `src/constants/schedule.ts`
-
-Atividades:
-
-- Definição dos períodos Manhã, Tarde e Noite.
-- Configuração dos 13 horários.
-- Criação do tipo SchedulePeriod.
-- Criação da constante AVAILABLE_TIMES.
-- Utilização de flatMap() para reunir os horários.
-
-Validação:
-
-- Compilação TypeScript com `npx tsc -b`.
-
-### Próxima etapa
-
-Implementar as funções utilitárias para filtrar,
-ordenar e agrupar os agendamentos.
+- Configuração dos três períodos.
+- Definição de 13 horários.
+- Criação de SCHEDULE_PERIODS.
+- Criação de AVAILABLE_TIMES.
 
 ### Etapa 04 — Funções utilitárias
 
-**Status:** Implementado; aguardando validação e commit.
+**Status:** Implementado.
 
-**Arquivo:** `src/utils/appointmentUtils.ts`
-
-Atividades:
-
-- Identificação do período por horário.
-- Filtragem de agendamentos por data usando filter().
-- Ordenação cronológica usando sort().
-- Agrupamento por períodos usando reduce().
-- Criação de função para consultar a agenda por data.
+- Filtragem por data.
+- Identificação do período.
+- Ordenação cronológica.
+- Agrupamento por período.
 - Preservação do array original durante a ordenação.
 
-Validação:
+### Etapa 05 — Context API e Hooks
 
-- Compilação TypeScript com `npx tsc -b`.
-
-### Próxima etapa
-
-Implementar AppointmentContext, Provider e
-o Hook personalizado useAppointments.
-
-### Etapa 05.1 — AppointmentContext
-
-**Status:** Implementado; aguardando validação.
-
-**Arquivo:** `src/contexts/AppointmentContext.tsx`
-
-Atividades:
+**Status:** Implementado.
 
 - Criação do AppointmentContext.
 - Implementação do AppointmentProvider.
-- Gerenciamento de agendamentos com useState.
-- Gerenciamento da data selecionada.
-- Implementação do cadastro com validação básica.
-- Implementação da exclusão individual com filter().
-- Utilização de useCallback e useMemo.
+- Criação de useAppointments.
+- Integração ao main.tsx.
+- Cadastro e exclusão utilizando estado React.
 
-Observações:
+### Etapa 06 — Estrutura visual
 
-- O Provider ainda precisa ser integrado ao main.tsx.
-- O Hook useAppointments será criado na próxima etapa.
-- Os dados permanecem em memória.
+**Status:** Implementado.
 
-Validação:
+- Criação da ScheduleSidebar.
+- Criação do layout principal.
+- Configuração dos estilos globais.
+- Estilização da Sidebar.
+- Implementação das regras responsivas iniciais.
 
-- Compilação TypeScript.
+### Etapa 07 — Formulário
 
-### Etapa 05.2 — Hook useAppointments
+**Status:** Implementado.
 
-**Status:** Implementado; aguardando validação.
-
-**Arquivo:** `src/hooks/useAppointments.ts`
-
-Atividades:
-
-- Criação do Hook personalizado useAppointments.
-- Integração com AppointmentContext.
-- Utilização do Hook useContext.
-- Retorno tipado com AppointmentContextData.
-- Tratamento de erro quando utilizado fora do Provider.
-
-Validação:
-
-- Compilação TypeScript com npx tsc -b.
-
-Observações:
-
-- O AppointmentProvider ainda precisa ser integrado ao main.tsx.
-- O Hook será utilizado pelos componentes do HairDay.
-
-### Etapa 05.3 — Integração do AppointmentProvider
-
-**Status:** Implementado; aguardando validação e commit.
-
-**Arquivo:** `src/main.tsx`
-
-Atividades:
-
-- Importação do AppointmentProvider.
-- Integração do Provider à raiz da aplicação.
-- Preservação do React StrictMode.
-- Disponibilização do contexto para os componentes filhos.
-
-Validação:
-
-- Compilação TypeScript.
-- Build de produção.
-
-Observações:
-
-- O gerenciamento de agendamentos está preparado.
-- Os componentes visuais ainda serão implementados.
-- Os testes funcionais serão realizados após a integração da interface.
-
-### Etapa 06.1 — Estrutura do ScheduleSidebar
-
-**Status:** Implementado; aguardando validação.
-
-**Arquivo:**
-
-- `src/components/ScheduleSidebar/ScheduleSidebar.tsx`
-
-Atividades:
-
-- Criação do componente ScheduleSidebar.
-- Definição de Props tipadas com ReactNode.
-- Utilização de elementos semânticos.
-- Inclusão de título e descrição.
-- Preparação para receber o AppointmentForm.
-- Inclusão de identificação acessível com aria-label.
-
-Observações:
-
-- Estilização CSS pendente.
-- Integração ao App.tsx pendente.
-- Fidelidade visual ao Figma ainda não validada.
-
-Validação:
-
-- Compilação TypeScript.
-- Build de produção.
-
-### Etapa 06.2 — Estilização da ScheduleSidebar
-
-**Status:** Implementado; aguardando validação.
-
-**Arquivo:**
-
-- `src/components/ScheduleSidebar/ScheduleSidebar.css`
-
-Atividades:
-
-- Criação dos estilos da Sidebar.
-- Definição de fundo escuro e tipografia.
-- Configuração de espaçamentos internos.
-- Definição de largura para desktop.
-- Adaptação responsiva para tablet e mobile.
-- Preparação visual para o formulário.
-
-Observações:
-
-- CSS ainda não importado pelo componente.
-- Sidebar ainda não integrada ao App.tsx.
-- Cores e proporções ainda precisam ser conferidas no Figma.
-- Responsividade visual ainda não testada no navegador.
-
-Validação:
-
-- Build de produção.
-- Verificação de formatação do Git.
-
-### Etapa 06.3 — Integração do CSS da Sidebar
-
-**Status:** Implementado; aguardando validação e commit.
-
-**Arquivo:**
-
-- `src/components/ScheduleSidebar/ScheduleSidebar.tsx`
-
-Atividades:
-
-- Importação do ScheduleSidebar.css.
-- Integração dos estilos ao componente.
-- Preservação das Props tipadas com ReactNode.
-- Preservação da estrutura semântica e acessível.
-
-Validação:
-
-- Compilação TypeScript.
-- Build de produção.
-
-Observações:
-
-- A Sidebar ainda não está integrada ao App.tsx.
-- A interface ainda precisa ser comparada ao Figma.
-- A responsividade visual ainda precisa ser testada.
-
-### Etapa 06.4 — Integração da Sidebar ao App
-
-**Status:** Implementado; aguardando validação.
-
-**Arquivo:**
-
-- `src/App.tsx`
-
-Atividades:
-
-- Importação do componente ScheduleSidebar.
-- Criação da estrutura principal da aplicação.
-- Inclusão do título "Sua agenda".
-- Criação da área reservada aos agendamentos.
-- Utilização de elementos semânticos e aria-label.
-- Preservação da importação do App.css.
-
-Observações:
-
-- O formulário ainda será implementado.
-- A listagem ainda será implementada.
-- Os estilos do layout principal ainda precisam ser criados.
-- Fidelidade ao Figma ainda não validada.
-
-Validação:
-
-- Compilação TypeScript.
-- Build de produção.
-- Verificação visual no navegador.
-
-### Etapa 06.5 — Layout principal responsivo
-
-**Status:** Implementado; aguardando validação.
-
-**Arquivo:**
-
-- `src/App.css`
-
-Atividades:
-
-- Estilização do layout principal.
-- Organização da Sidebar e agenda com Flexbox.
-- Definição de cores e tipografia iniciais.
-- Estilização do cabeçalho da agenda.
-- Estilização da mensagem provisória.
-- Implementação de media queries.
-- Adaptação para desktop, tablet e mobile.
-
-Observações:
-
-- As cores e medidas ainda precisam ser
-  comparadas com o Figma.
-- O formulário de agendamento está pendente.
-- A listagem dos agendamentos está pendente.
-- A responsividade visual precisa ser testada.
-
-Validação:
-
-- Compilação TypeScript.
-- Build de produção.
-- Verificação visual em desktop e mobile.
-
-### Etapa 06.6 — Estilos globais
-
-**Status:** Implementado; aguardando validação e commit.
-
-**Arquivo:**
-
-- `src/index.css`
-
-Atividades:
-
-- Substituição dos estilos globais iniciais do Vite.
-- Configuração de cores e variáveis CSS.
-- Definição da tipografia global.
-- Padronização de box-sizing.
-- Normalização de botões e campos de formulário.
-- Inclusão de foco visível para navegação por teclado.
-- Respeito à preferência por movimento reduzido.
-- Configuração de estilos de seleção de texto.
-
-Observações:
-
-- A identidade visual ainda precisa ser comparada
-  com o protótipo oficial do Figma.
-- Os componentes de formulário estão pendentes.
-- Os testes de acessibilidade ainda não foram executados.
-
-Validação:
-
-- Compilação TypeScript.
-- Build de produção.
-- Verificação visual desktop e mobile.
-
-### Etapa 07.1 — Componente AppointmentForm
-
-**Status:** Implementado; aguardando validação e commit.
-
-**Arquivo:**
-
-- `src/components/AppointmentForm/AppointmentForm.tsx`
-
-Atividades:
-
-- Criação do formulário de agendamentos.
-- Integração com o Hook useAppointments.
-- Gerenciamento dos campos com useState.
-- Seleção de horários por período.
-- Utilização de map() para renderizar horários.
+- Criação do AppointmentForm.
+- Campos de nome e data.
+- Seleção de horários.
 - Validação de campos obrigatórios.
-- Inclusão de mensagens de erro e sucesso.
-- Utilização de labels e atributos de acessibilidade.
-- Preparação para integração com a Sidebar.
+- Mensagens de erro e sucesso.
+- Integração ao Context API.
+- Estilização do formulário.
 
-Observações:
+### Etapa 08 — Filtro de data
 
-- O CSS do formulário ainda será implementado.
-- O formulário ainda não está integrado à Sidebar.
-- A validação completa de datas permanece pendente.
-- Os testes funcionais ainda não foram executados.
-- A interface ainda precisa ser comparada ao Figma.
+**Status:** Implementado.
 
-Validação:
+- Criação do DateFilter.
+- Integração com Context API.
+- Estilização do calendário.
+- Posicionamento do filtro na agenda.
+- Atualização dinâmica da data selecionada.
 
-- Compilação TypeScript.
-- Build de produção.
+### Etapa 09 — Listagem de agendamentos
 
-### Etapa 07.2 — Estilização do AppointmentForm
+**Status:** Implementado.
 
-**Status:** Implementado; aguardando validação e commit.
+- Criação do AppointmentItem.
+- Criação do PeriodSection.
+- Criação do AppointmentList.
+- Exibição de registros por período.
+- Implementação das mensagens de estado vazio.
+- Integração da exclusão.
+- Integração da listagem ao App.tsx.
 
-**Arquivo:**
+### Etapa 10 — Integração funcional
 
-- `src/components/AppointmentForm/AppointmentForm.css`
+**Status:** Implementado; verificações complementares pendentes.
 
-Atividades:
+- Integração entre formulário e listagem.
+- Atualização imediata dos agendamentos.
+- Integração do filtro por data.
+- Exclusão individual pelo Context API.
 
-- Estilização dos campos de data e cliente.
-- Criação do grid de seleção de horários.
-- Estilização dos estados normal, hover e selecionado.
-- Estilização do botão Agendar.
-- Estilização das mensagens de erro e sucesso.
-- Adaptação dos horários para telas pequenas.
-- Inclusão de foco visível e suporte a movimento reduzido.
+### Etapa 11 — Ajustes visuais conforme o Figma
 
-Observações:
+**Status:** Implementado parcialmente; revisão final pendente.
 
-- CSS ainda precisa ser importado no AppointmentForm.tsx.
-- Formulário ainda não está integrado à Sidebar.
-- Fidelidade visual ao Figma não validada.
-- Testes funcionais ainda pendentes.
+#### Etapas 11.1 a 11.5
 
-Validação:
+- Atualização da identidade visual para dourado e grafite.
+- Ajustes do formulário e da Sidebar.
+- Reorganização da agenda.
+- Correção dos cards de períodos.
+- Ajustes responsivos.
 
-- Build de produção.
-- Verificação de formatação do Git.
+#### Etapas 11.6 a 11.10
 
-### Etapa 07.3 — Integração do CSS do formulário
+- Instalação do Lucide React.
+- Inclusão dos ícones dos períodos.
+- Inclusão do ícone de exclusão.
+- Inclusão de ícones no formulário.
+- Ajustes visuais do seletor de data.
 
-**Status:** Implementado; aguardando validação e commit.
+#### Etapa 11.11 — Correção do cabeçalho
 
-**Arquivo:**
+- Identificação do CSS antigo.
+- Atualização efetiva do App.css.
+- Implementação do CSS Grid.
+- Correção do alinhamento do filtro no desktop.
 
-- `src/components/AppointmentForm/AppointmentForm.tsx`
+#### Etapas 11.12 e 11.13 — Marca HairDay
 
-Atividades:
+- Inclusão do ícone de tesoura.
+- Inclusão do nome HairDay.
+- Estilização e posicionamento da marca.
+- Ajustes de espaçamento na Sidebar.
 
-- Importação do AppointmentForm.css.
-- Integração dos estilos ao formulário.
-- Preservação das validações dos campos.
-- Preservação da seleção de horários.
-- Preservação da integração com Context API.
-- Preservação das mensagens de erro e sucesso.
+#### Etapa 11.14 — Revisão visual
 
-Observações:
+- Conferência da tela desktop por captura.
+- Verificação de Sidebar, ícones e cards.
+- Identificação de diferenças restantes em relação ao Figma.
 
-- O formulário ainda não está integrado à Sidebar.
-- Os testes funcionais ainda não foram executados.
-- A fidelidade visual ao Figma ainda precisa ser validada.
+#### Etapa 11.15 — Refinamento da agenda
 
-Validação:
+- Remoção do resumo visual acima dos períodos.
+- Preservação das mensagens de estado vazio.
+- Manutenção da filtragem e da exclusão.
 
-- Compilação TypeScript.
-- Build de produção.
+---
 
-### Etapa 07.4 — Integração do formulário à Sidebar
+## 13. Etapa 12 — Testes funcionais manuais
 
-**Status:** Implementado; aguardando validação.
+**Status:** 6 testes manuais aprovados conforme confirmação durante o desenvolvimento.
 
-**Arquivo:** `src/App.tsx`
+**Data do registro:** 12/11/2026.
 
-Atividades:
+**Ambiente:** HairDay executado no navegador, com React, TypeScript e Vite.
 
-- Integração do AppointmentForm à ScheduleSidebar.
-- Preservação do layout principal.
-- Disponibilização do formulário na interface.
-- Utilização do AppointmentProvider já configurado.
+### Teste 01 — Cadastro de agendamento
 
-Observações:
+**Resultado: APROVADO**
 
-- A listagem dos agendamentos ainda será implementada.
-- A fidelidade visual ao Figma ainda precisa ser validada.
-- Os testes funcionais completos continuam pendentes.
+Dados utilizados:
 
-Validação:
+- Cliente: Maria Silva.
+- Data: 12/11/2026.
+- Horário: 09:00.
 
-- Compilação TypeScript.
-- Build de produção.
-- Teste visual e manual do formulário.
+Verificações:
 
-### Etapa 08.1 — Componente DateFilter
-
-**Status:** Implementado; aguardando validação e commit.
-
-**Arquivo:** `src/components/DateFilter/DateFilter.tsx`
-
-Atividades:
-
-- Criação do componente DateFilter.
-- Integração com o Hook useAppointments.
-- Utilização do Context API.
-- Controle da data selecionada.
-- Criação de Props tipadas.
-- Utilização de useId para identificação acessível.
-- Atualização do estado por meio do evento onChange.
-
-Observações:
-
-- O componente ainda não foi integrado ao App.tsx.
-- O CSS será implementado na próxima etapa.
-- A filtragem visual será conectada à listagem posteriormente.
-
-Validação:
-
-- Compilação TypeScript.
-- Build de produção.
-
-### Etapa 08.2 — Estilização do DateFilter
-
-**Status:** Implementado; aguardando validação e commit.
-
-**Arquivo:**
-
-- `src/components/DateFilter/DateFilter.css`
-
-Atividades:
-
-- Estilização do seletor de data.
-- Definição de cores, bordas e espaçamentos.
-- Configuração de estados hover e focus-visible.
-- Adaptação para dispositivos móveis.
-- Suporte à preferência por movimento reduzido.
-
-Observações:
-
-- CSS ainda precisa ser importado no DateFilter.tsx.
-- DateFilter ainda não está integrado ao App.tsx.
-- A filtragem da listagem ainda será implementada.
-- Fidelidade visual ao Figma não validada.
-
-Validação:
-
-- Compilação TypeScript.
-- Build de produção.
-
-### Etapa 08.3 — Integração do CSS do DateFilter
-
-**Status:** Implementado; aguardando validação e commit.
-
-**Arquivo:**
-
-- `src/components/DateFilter/DateFilter.tsx`
-
-Atividades:
-
-- Importação do DateFilter.css.
-- Integração dos estilos ao componente.
-- Preservação da comunicação com Context API.
-- Manutenção da Props label tipada.
-- Utilização de useId para acessibilidade.
-- Atualização da data selecionada via onChange.
-
-Observações:
-
-- DateFilter ainda precisa ser integrado ao App.tsx.
-- A filtragem dos agendamentos será conectada à listagem.
-- A fidelidade visual ao Figma ainda não foi validada.
-
-Validação:
-
-- Compilação TypeScript.
-- Build de produção.
-
-### Etapa 08.4 — Integração do DateFilter à agenda
-
-**Status:** Implementado; aguardando validação e commit.
-
-**Arquivo:**
-
-- `src/App.tsx`
-
-Atividades:
-
-- Importação do componente DateFilter.
-- Integração do seletor de data ao cabeçalho da agenda.
-- Preservação da Sidebar e do formulário.
-- Integração com a data selecionada no Context API.
-- Manutenção da estrutura responsiva existente.
-
-Observações:
-
-- A alteração da data já atualiza o estado global.
-- A listagem filtrada ainda não está implementada.
-- O layout visual ainda precisa ser comparado ao Figma.
-
-Validação:
-
-- Compilação TypeScript.
-- Build de produção.
-- Verificação visual do seletor de data.
-- Verificação da seleção de diferentes datas.
-
-### Etapa 09.1 — Componente AppointmentItem
-
-**Status:** Implementado; aguardando validação e commit.
-
-**Arquivo:**
-
-- `src/components/AppointmentItem/AppointmentItem.tsx`
-
-Atividades:
-
-- Criação do componente reutilizável AppointmentItem.
-- Definição de Props tipadas com TypeScript.
-- Exibição do horário e nome do cliente.
-- Criação do botão de exclusão com ícone de lixeira.
-- Implementação do callback onDelete utilizando o ID.
-- Inclusão de atributos de acessibilidade.
-
-Observações:
-
-- A estilização CSS será implementada na próxima etapa.
-- O componente ainda não está integrado à listagem.
-- A exclusão visual ainda não foi testada.
-- A fidelidade ao Figma ainda precisa ser validada.
-
-Validação:
-
-- Compilação TypeScript.
-- Build de produção.
-- Verificação de formatação do Git.
-
-### Etapa 09.2 — Estilização do AppointmentItem
-
-**Status:** Implementado; aguardando validação e commit.
-
-**Arquivo:**
-
-- `src/components/AppointmentItem/AppointmentItem.css`
-
-Atividades:
-
-- Estilização das linhas de agendamento.
-- Destaque visual para os horários.
-- Estilização do nome do cliente.
-- Estilização do botão de exclusão.
-- Inclusão de estados hover, focus-visible e active.
-- Adaptação para dispositivos móveis.
-- Configuração de área de clique de 44 × 44 pixels.
-- Suporte à preferência por movimento reduzido.
-
-Observações:
-
-- O CSS ainda precisa ser importado no AppointmentItem.tsx.
-- O componente ainda não está integrado à listagem.
-- A exclusão funcional ainda precisa ser testada.
-- A fidelidade visual ao Figma ainda não foi validada.
-
-Validação:
-
-- Compilação TypeScript.
-- Build de produção.
-- Verificação de formatação do Git.
-
-### Etapa 09.3 — Integração do CSS do AppointmentItem
-
-**Status:** Implementado; aguardando validação e commit.
-
-**Arquivo:**
-
-- `src/components/AppointmentItem/AppointmentItem.tsx`
-
-Atividades:
-
-- Importação do AppointmentItem.css.
-- Integração dos estilos ao componente.
-- Preservação das Props tipadas.
-- Preservação da exibição de horário e cliente.
-- Preservação do callback onDelete.
-- Manutenção dos atributos de acessibilidade.
-
-Observações:
-
-- O componente ainda precisa ser integrado à listagem.
-- A exclusão ainda não foi testada na interface.
-- A fidelidade visual ao Figma ainda não foi validada.
-
-Validação:
-
-- Compilação TypeScript.
-- Build de produção.
-
-### Etapa 09.4 — Componente PeriodSection
-
-**Status:** Implementado; aguardando validação e commit.
-
-**Arquivo:**
-
-- `src/components/PeriodSection/PeriodSection.tsx`
-
-Atividades:
-
-- Criação do componente reutilizável PeriodSection.
-- Definição de Props tipadas com TypeScript.
-- Identificação dos períodos por meio do tipo Period.
-- Exibição do título e intervalo de horários.
-- Ordenação cronológica usando sort().
-- Renderização dos agendamentos usando map().
-- Integração com o componente AppointmentItem.
-- Preservação do callback de exclusão.
-- Exibição da mensagem obrigatória de estado vazio.
-- Utilização de elementos semânticos e aria-labelledby.
-
-Observações:
-
-- O CSS do PeriodSection ainda será implementado.
-- O componente ainda não está integrado à agenda.
-- Os testes funcionais ainda estão pendentes.
-- A fidelidade visual ao Figma ainda não foi validada.
-
-Validação:
-
-- Compilação TypeScript.
-- Build de produção.
-
-### Etapa 09.6 — Integração do CSS do PeriodSection
-
-**Status:** Implementado; aguardando validação e commit.
-
-**Arquivo:**
-
-- `src/components/PeriodSection/PeriodSection.tsx`
-
-Atividades:
-
-- Importação do PeriodSection.css.
-- Aplicação dos estilos aos blocos de períodos.
-- Preservação das Props tipadas.
-- Preservação da ordenação cronológica.
-- Preservação da mensagem obrigatória de estado vazio.
-- Manutenção do callback de exclusão.
-
-Observações:
-
-- O PeriodSection ainda precisa ser integrado à agenda.
-- Os testes funcionais ainda estão pendentes.
-- A fidelidade visual ao Figma ainda não foi validada.
-
-Validação:
-
-- Compilação TypeScript.
-- Build de produção.
-
-### Etapa 09.7 — Componente AppointmentList
-
-**Status:** Implementado; aguardando validação e commit.
-
-**Arquivo:**
-
-- `src/components/AppointmentList/AppointmentList.tsx`
-
-Atividades:
-
-- Criação do componente AppointmentList.
-- Integração com useAppointments e Context API.
-- Filtragem dos agendamentos pela data selecionada.
-- Agrupamento dos agendamentos por períodos.
-- Utilização de useMemo para otimizar cálculos.
-- Utilização de reduce() para contar agendamentos.
-- Utilização de map() para renderizar os períodos.
-- Integração com PeriodSection.
-- Conexão do callback de exclusão.
-- Exibição do total de agendamentos da data.
-
-Observações:
-
-- O CSS do AppointmentList ainda será implementado.
-- O componente ainda não está integrado ao App.tsx.
-- Cadastro, filtro e exclusão ainda precisam
-  ser testados na interface.
-- A fidelidade ao Figma ainda não foi validada.
-
-Validação:
-
-- Compilação TypeScript.
-- Build de produção.
-
-### Etapa 09.8 — Estilização do AppointmentList
-
-**Status:** Implementado; aguardando validação e commit.
-
-**Arquivo:**
-
-- `src/components/AppointmentList/AppointmentList.css`
-
-Atividades:
-
-- Estilização da listagem de agendamentos.
-- Criação dos estilos do resumo da agenda.
-- Organização visual dos períodos.
-- Definição de espaçamentos e cores.
-- Implementação de responsividade para tablet e mobile.
-
-Observações:
-
-- CSS ainda precisa ser importado no AppointmentList.tsx.
-- A listagem ainda não está integrada ao App.tsx.
-- A fidelidade visual ao Figma ainda não foi validada.
-- Os testes funcionais continuam pendentes.
-
-Validação:
-
-- Compilação TypeScript.
-- Build de produção.
-- Verificação de formatação do Git.
-
-### Etapa 09.9 — Integração do CSS do AppointmentList
-
-**Status:** Implementado; aguardando validação e commit.
-
-**Arquivo:**
-
-- `src/components/AppointmentList/AppointmentList.tsx`
-
-Atividades:
-
-- Importação do AppointmentList.css.
-- Integração dos estilos à listagem.
-- Preservação do Context API e do Hook useAppointments.
-- Preservação da filtragem por data.
-- Preservação do agrupamento por períodos.
-- Preservação do cálculo de total com reduce().
-- Preservação do callback de exclusão.
-
-Observações:
-
-- A listagem ainda precisa ser integrada ao App.tsx.
-- Os testes funcionais completos ainda estão pendentes.
-- A fidelidade visual ao Figma ainda não foi validada.
-
-Validação:
-
-- Compilação TypeScript.
-- Build de produção.
-
-### Etapa 09.10 — Integração da listagem ao App
-
-**Status:** Implementado; aguardando validação funcional.
-
-**Arquivo:**
-
-- `src/App.tsx`
-
-Atividades:
-
-- Integração do AppointmentList à agenda.
-- Substituição da mensagem provisória.
-- Conexão visual entre formulário e listagem.
-- Utilização do Context API para atualização dos dados.
-- Disponibilização do filtro por data.
-- Exibição de agendamentos por períodos.
-- Disponibilização da exclusão individual.
-
-Validações necessárias:
-
-- Cadastro de agendamentos.
+- Cadastro realizado.
 - Atualização imediata da agenda.
-- Filtragem por data.
-- Agrupamento em Manhã, Tarde e Noite.
-- Ordenação cronológica.
-- Exibição da mensagem obrigatória de estado vazio.
-- Exclusão individual sem afetar outros registros.
-- Validação de campos obrigatórios.
-- Compilação TypeScript.
-- Build de produção.
+- Cliente exibida no período Manhã.
+- Horário apresentado corretamente.
 
-Observações:
+### Teste 02 — Exclusão de agendamento
 
-- A fidelidade visual ao Figma ainda não foi validada.
-- Testes automatizados com Playwright ainda pendentes.
-- Persistência em localStorage não implementada,
-  pois é opcional no enunciado.
+**Resultado: APROVADO**
 
-### Etapa 11.1 — Identidade visual do HairDay
+Verificações:
 
-**Status:** Implementado; aguardando validação.
+- Exclusão de Maria Silva pelo botão de lixeira.
+- Remoção imediata da listagem.
+- Exibição da mensagem de período vazio.
 
-**Arquivo:**
+### Teste 03 — Filtro por data
 
-- `src/index.css`
+**Resultado: APROVADO**
 
-Atividades:
+Dados utilizados:
 
-- Revisão visual da aplicação com base no Figma.
-- Atualização da paleta global para dourado e grafite.
-- Definição de variáveis CSS reutilizáveis.
-- Padronização das cores de textos e bordas.
-- Preservação dos estilos globais de acessibilidade.
-- Manutenção da responsividade existente.
+- Cliente: Ana Oliveira.
+- Data: 13/11/2026.
+- Horário: 14:00.
 
-Observações:
+Verificações:
 
-- Os componentes ainda utilizam algumas cores fixas.
-- A nova paleta será aplicada gradualmente.
-- As cores ainda precisam ser conferidas no Style Guide.
-- Nenhuma funcionalidade de agendamento foi removida.
+- Agendamento apresentado em 13/11/2026.
+- Alteração do filtro para 14/11/2026.
+- Agendamento ocultado na outra data.
+- Retorno para 13/11/2026.
+- Agendamento apresentado novamente.
 
-Validação:
+### Teste 04 — Nome obrigatório
 
-- Compilação TypeScript.
-- Build de produção.
-- Verificação visual da aplicação.
+**Resultado: APROVADO**
 
-### Etapa 11.2 — Ajustes visuais do formulário
+Procedimento:
 
-**Status:** Implementado; aguardando validação.
+- Tentativa de cadastro sem preencher o nome.
 
-**Arquivo:**
+Verificações:
 
-- `src/components/AppointmentForm/AppointmentForm.css`
+- Mensagem "Informe o nome do cliente." exibida.
+- Cadastro impedido.
 
-Atividades:
+### Teste 05 — Horário obrigatório
 
-- Substituição dos detalhes roxos por dourado.
-- Aplicação das variáveis CSS globais.
-- Ajuste das cores e bordas dos campos.
-- Refinamento dos botões de horários.
-- Destaque dourado para o horário selecionado.
-- Estilização dourada do botão AGENDAR.
-- Ajuste de espaçamentos e tipografia.
-- Preservação dos estados de foco e acessibilidade.
-- Manutenção da responsividade.
+**Resultado: APROVADO**
 
-Observações:
+Procedimento:
 
-- Nenhuma funcionalidade foi removida.
-- As cores são aproximações visuais do Figma.
-- Ainda precisamos ajustar os demais componentes.
-- A comparação visual final permanece pendente.
+- Cliente: Carlos Santos.
+- Data: 13/11/2026.
+- Horário não selecionado.
 
-Validação:
+Verificações:
 
-- Compilação TypeScript.
-- Build de produção.
-- Verificação visual do formulário.
+- Mensagem "Selecione um horário." exibida.
+- Cadastro impedido.
 
-### Etapa 11.3 — Ajustes visuais da Sidebar
+### Teste 06 — Agrupamento por períodos
 
-**Status:** Implementado; aguardando validação.
+**Resultado: APROVADO**
 
-**Arquivo:**
+Dados utilizados:
 
-- `src/components/ScheduleSidebar/ScheduleSidebar.css`
+| Cliente      | Horário | Período |
+| ------------ | ------- | ------- |
+| João Silva   | 10:00   | Manhã   |
+| Beatriz Lima | 16:00   | Tarde   |
+| Pedro Costa  | 20:00   | Noite   |
+| Ana Oliveira | 14:00   | Tarde   |
 
-Atividades:
+Verificações:
 
-- Atualização do fundo para grafite.
-- Aplicação das variáveis globais de cores.
-- Ajuste da largura da Sidebar no desktop.
-- Refinamento dos espaçamentos internos.
-- Ajuste da tipografia do cabeçalho.
-- Melhoria da responsividade para tablet e celular.
-- Preservação dos estilos e funcionalidades existentes.
+- Registros exibidos nos períodos correspondentes.
+- Agendamento de Ana Oliveira preservado.
+- Separação visual correta entre Manhã, Tarde e Noite.
 
-Observações:
+**Observação:** os seis resultados acima são testes manuais relatados durante o desenvolvimento. Não representam testes automatizados com Playwright.
 
-- A logo HairDay ainda será implementada.
-- Os ajustes utilizam medidas aproximadas do Figma.
-- A comparação visual final ainda está pendente.
-- Nenhuma funcionalidade foi removida.
+---
 
-Validação:
+## 14. Checklist geral de desenvolvimento
 
-- Compilação TypeScript.
-- Build de produção.
-- Verificação visual em desktop e mobile.
+### Estrutura e tecnologia
 
-### Etapa 11.4 — Ajuste do layout da agenda
+- [x] Criar projeto React + TypeScript com Vite 8.
+- [x] Criar repositório Git.
+- [x] Conectar ao GitHub.
+- [x] Criar AGENTS.md.
+- [x] Criar SPEC.md.
+- [x] Criar estrutura de componentes.
+- [x] Criar tipos TypeScript.
+- [x] Configurar horários e períodos.
+- [x] Implementar funções utilitárias.
 
-**Status:** Implementado; aguardando validação.
+### React e TypeScript
 
-**Arquivo:**
+- [x] Implementar useState.
+- [x] Implementar Context API.
+- [x] Implementar AppointmentProvider.
+- [x] Criar Hook useAppointments.
+- [x] Utilizar Props tipadas.
+- [x] Utilizar map().
+- [x] Utilizar filter().
+- [x] Utilizar reduce().
+- [x] Implementar ordenação cronológica no código.
 
-- `src/App.css`
+### Funcionalidades
 
-Atividades:
+- [x] Implementar cadastro.
+- [x] Implementar listagem.
+- [x] Implementar filtro por data.
+- [x] Implementar agrupamento por períodos.
+- [x] Implementar exclusão.
+- [x] Implementar mensagens de período vazio.
+- [x] Validar cadastro manualmente.
+- [x] Validar exclusão manualmente.
+- [x] Validar filtro por data manualmente.
+- [x] Validar nome obrigatório.
+- [x] Validar horário obrigatório.
+- [x] Validar agrupamento por períodos.
+- [ ] Testar data obrigatória.
+- [ ] Testar datas inválidas e restrições.
+- [ ] Testar ordenação com vários agendamentos.
+- [ ] Confirmar preservação de outros registros após exclusão.
 
-- Reorganização do cabeçalho com CSS Grid.
-- Posicionamento do seletor de data à direita no desktop.
-- Ajuste da largura e espaçamentos da agenda.
-- Aplicação das variáveis de identidade visual.
-- Adaptação do cabeçalho para dispositivos móveis.
-- Preservação da Sidebar e da listagem existentes.
+### Interface
 
-Observações:
+- [x] Criar Sidebar.
+- [x] Criar formulário.
+- [x] Criar área da agenda.
+- [x] Criar cards de períodos.
+- [x] Aplicar identidade dourada e grafite.
+- [x] Adicionar ícones Lucide React.
+- [x] Adicionar marca HairDay.
+- [x] Posicionar calendário à direita no desktop.
+- [x] Implementar regras responsivas.
+- [ ] Validar versão mobile visualmente.
+- [ ] Conferir fidelidade final ao Figma.
+- [ ] Revisar acessibilidade.
 
-- A aparência do DateFilter será refinada posteriormente.
-- Os cards de períodos ainda precisam de ajustes visuais.
-- A fidelidade final ao Figma ainda está pendente.
-- Nenhuma funcionalidade foi removida.
+### Ferramentas e testes
 
-Validação:
+- [x] Utilizar ChatGPT no desenvolvimento.
+- [x] Realizar testes manuais.
+- [ ] Registrar consulta real ao Context7 MCP.
+- [ ] Executar testes com Playwright MCP.
+- [ ] Salvar evidências das ferramentas.
+- [ ] Conferir erros do console.
+- [ ] Executar revisão final do build.
 
-- Compilação TypeScript.
-- Build de produção.
-- Verificação visual desktop e mobile.
+### Entrega
 
-### Etapa 11.5 — Correção visual dos cards
+- [ ] Finalizar README.md.
+- [ ] Revisar AGENTS.md.
+- [ ] Finalizar SPEC.md.
+- [ ] Capturar tela desktop final.
+- [ ] Capturar tela mobile final.
+- [ ] Confirmar histórico de commits.
+- [ ] Conferir repositório GitHub.
+- [ ] Enviar link e evidências pelo Blackboard.
 
-**Status:** Implementado; aguardando validação.
+---
 
-**Arquivo:**
+## 15. Testes automatizados planejados
 
-- `src/components/PeriodSection/PeriodSection.css`
+Os testes devem ser executados com Playwright MCP.
 
-Problema identificado:
+### Cenários previstos
 
-- O arquivo CSS existia, mas estava vazio.
-- Os períodos eram exibidos sem estilização.
+**CT01 — Inicialização**
 
-Correções:
+Verificar se a aplicação abre sem erros.
 
-- Criação dos cards com bordas arredondadas.
-- Estilização dos cabeçalhos dos períodos.
-- Ajuste de cores e espaçamentos.
-- Estilização das mensagens de estado vazio.
-- Adaptação para dispositivos móveis.
-- Preservação das funcionalidades existentes.
+**CT02 — Cadastro válido**
 
-Validação:
+Cadastrar cliente com nome, data e horário e verificar atualização imediata.
 
-- Compilação TypeScript.
-- Build de produção.
-- Verificação visual dos três cards.
+**CT03 — Nome obrigatório**
 
-### Etapa 11.6 — Ícones dos períodos
+Verificar se um nome vazio impede o cadastro.
 
-**Status:** Implementado; aguardando validação.
+**CT04 — Horário obrigatório**
 
-**Arquivo:**
+Verificar se um horário não selecionado impede o cadastro.
 
-- `src/components/PeriodSection/PeriodSection.tsx`
+**CT05 — Data obrigatória**
 
-Atividades:
+Verificar se a ausência de data impede o cadastro.
 
-- Integração da biblioteca lucide-react.
-- Adição do ícone Sunrise para Manhã.
-- Adição do ícone CloudSun para Tarde.
-- Adição do ícone MoonStar para Noite.
-- Aplicação da cor dourada da identidade visual.
-- Preservação da ordenação e exclusão.
-- Manutenção da acessibilidade dos componentes.
+**CT06 — Filtro por data**
 
-Observações:
+Verificar se somente os agendamentos do dia selecionado aparecem.
 
-- Os ícones são decorativos.
-- A fidelidade visual ainda precisa ser conferida.
-- Outros ícones da interface serão adicionados posteriormente.
+**CT07 — Agrupamento por períodos**
 
-Validação:
+Verificar se os registros aparecem nos períodos corretos.
 
-- Compilação TypeScript.
-- Build de produção.
-- Verificação visual dos ícones.
+**CT08 — Ordenação cronológica**
 
-### Etapa 11.7 — Ícone dourado de exclusão
+Cadastrar registros fora de ordem e verificar a apresentação cronológica.
 
-**Status:** Implementado; aguardando validação.
+**CT09 — Exclusão individual**
 
-**Arquivo:**
+Excluir um registro e verificar que os demais permanecem.
 
-- `src/components/AppointmentItem/AppointmentItem.tsx`
+**CT10 — Estados vazios**
 
-Atividades:
+Verificar a mensagem obrigatória nos períodos sem agendamentos.
 
-- Substituição do SVG manual pelo ícone Trash2.
-- Utilização da biblioteca lucide-react.
-- Aplicação da cor dourada da identidade visual.
-- Preservação do callback onDelete.
-- Preservação das Props tipadas.
-- Manutenção dos atributos de acessibilidade.
+**CT11 — Responsividade**
 
-Validação:
+Validar a aplicação em viewport desktop e mobile.
 
-- Compilação TypeScript.
-- Build de produção.
-- Teste manual de exclusão de agendamento.
+**CT12 — Console do navegador**
 
-### Etapa 11.8 — Ícones do formulário
+Verificar a ausência de erros durante os fluxos principais.
 
-**Status:** Implementado; aguardando validação.
+**Status:** planejamento concluído; execução automatizada pendente.
 
-**Arquivo:**
+Nenhum teste automatizado deve ser considerado aprovado antes de sua execução real.
 
-- `src/components/AppointmentForm/AppointmentForm.tsx`
+---
 
-Atividades:
+## 16. Acessibilidade
 
-- Adição do ícone CalendarDays no campo Data.
-- Adição do ícone UserRound no campo Cliente.
-- Utilização da biblioteca lucide-react.
-- Preparação de wrappers para posicionar os ícones.
-- Preservação das validações do formulário.
-- Preservação do cadastro de agendamentos.
-- Manutenção de labels e atributos de acessibilidade.
+### Recursos implementados
 
-Observações:
+- Elementos HTML semânticos.
+- Labels associados aos campos.
+- Descrições acessíveis para botões de exclusão.
+- Estados de foco visíveis.
+- Atributos `aria-label`.
+- Uso de `aria-invalid` nas validações.
+- Mensagens de erro com `role="alert"`.
+- Mensagens de sucesso com `role="status"`.
+- Suporte à preferência por movimento reduzido.
+- Botões de horários com `aria-pressed`.
 
-- Os ícones ainda precisam de posicionamento via CSS.
-- A fidelidade visual será revisada após a estilização.
-- Nenhuma funcionalidade existente foi removida.
+### Validações pendentes
 
-Validação:
+- [ ] Testar navegação completa por teclado.
+- [ ] Verificar contraste de cores.
+- [ ] Testar mensagens com leitor de tela.
+- [ ] Verificar nomes acessíveis dos controles.
+- [ ] Conferir responsividade sem rolagem horizontal.
 
-- Compilação TypeScript.
-- Build de produção.
+---
 
-### Etapa 11.9 — Posicionamento dos ícones do formulário
+## 17. Funcionalidades opcionais
 
-**Status:** Implementado; aguardando validação.
+As funcionalidades abaixo não fazem parte do escopo mínimo obrigatório:
 
-**Arquivo:**
+- Persistência em localStorage.
+- Bloqueio de horários duplicados.
+- Personalização adicional da identidade visual.
 
-- `src/components/AppointmentForm/AppointmentForm.css`
+Sua implementação poderá ser avaliada após a conclusão dos requisitos obrigatórios.
 
-Atividades:
+---
 
-- Posicionamento dos ícones dentro dos campos.
-- Aplicação da cor dourada aos ícones.
-- Ajuste do espaçamento interno dos inputs.
-- Preservação do calendário nativo do navegador.
-- Refinamento dos estados hover e focus-visible.
-- Manutenção das validações e da responsividade.
+## 18. Regras de desenvolvimento
 
-Observações:
+Durante a construção do HairDay, seguir:
 
-- O JSX dos ícones foi implementado na etapa 11.8.
-- Nenhuma funcionalidade foi removida.
-- A fidelidade visual ainda precisa ser conferida.
+1. Desenvolver um arquivo de código por vez.
+2. Enviar arquivos completos.
+3. Preservar funcionalidades já implementadas.
+4. Manter código simples, organizado e tipado.
+5. Atualizar SPEC.md em cada etapa.
+6. Executar as verificações adequadas antes dos commits.
+7. Criar commits com mensagens descritivas.
+8. Enviar alterações ao GitHub após validação.
+9. Não afirmar que testes passaram sem execução.
+10. Seguir os requisitos do professor e o Board do Notion.
+11. Preservar a acessibilidade e a responsividade.
+12. Não adicionar backend ou funcionalidades desnecessárias.
 
-Validação:
+---
 
-- Compilação TypeScript.
-- Build de produção.
-- Verificação visual dos campos de data e cliente.
+## 19. Pendências para finalização
 
-### Próxima etapa
+### Prioridade 1 — Validação funcional
 
-Ajustar DateFilter para aproximar o seletor
-de data da agenda ao Figma.
+- Testar data obrigatória.
+- Verificar comportamento de datas inválidas.
+- Confirmar ordenação cronológica.
+- Revisar exclusão com múltiplos registros.
 
-### Etapa 11.10 — Ajustes do filtro de data
+### Prioridade 2 — Interface
 
-**Status:** Implementado; aguardando validação.
+- Validar a versão mobile.
+- Comparar os últimos detalhes com o Figma.
+- Revisar acessibilidade.
 
-**Arquivo:**
+### Prioridade 3 — Ferramentas
 
-- `src/components/DateFilter/DateFilter.css`
+- Consultar a documentação utilizando Context7 MCP.
+- Executar testes automatizados com Playwright MCP.
+- Registrar evidências reais das duas ferramentas.
 
-Atividades:
+### Prioridade 4 — Documentação e entrega
 
-- Aplicação da identidade visual do HairDay.
-- Ajuste das cores e bordas do seletor.
-- Refinamento da tipografia.
-- Configuração de largura compacta.
-- Destaque dourado nos estados hover e foco.
-- Preservação do calendário nativo.
-- Manutenção da responsividade.
+- Finalizar README.md.
+- Revisar AGENTS.md.
+- Atualizar SPEC.md após os testes restantes.
+- Capturar telas desktop e mobile.
+- Conferir repositório e commits.
+- Preparar a entrega no Blackboard.
 
-Observações:
+---
 
-- O posicionamento à direita depende do App.css.
-- A fidelidade visual ao Figma ainda precisa ser conferida.
-- Nenhuma funcionalidade foi removida.
+## 20. Situação atual
 
-Validação:
+**Última etapa registrada:** Etapa 12 — Testes funcionais manuais.
 
-- Compilação TypeScript.
-- Build de produção.
-- Verificação visual desktop e mobile.
+**Resultados conhecidos:**
 
-### Etapa 11.11 — Correção do alinhamento da agenda
+- Seis testes manuais aprovados conforme confirmação durante o desenvolvimento.
+- Estrutura principal da aplicação implementada.
+- Interface desktop revisada visualmente.
+- Cadastro, filtro e exclusão operacionais nos cenários manuais testados.
+- Context API, Hooks, Props e TypeScript aplicados.
 
-**Status:** Implementado; aguardando validação.
+**Ainda pendente:**
 
-**Arquivo:**
+- Testes automatizados com Playwright.
+- Evidências de Context7 MCP.
+- Revisão mobile e acessibilidade.
+- Testes funcionais complementares.
+- Finalização do README e documentação de entrega.
 
-- `src/App.css`
+### Próxima etapa — 12.8
 
-Problema identificado:
+Executar o teste de data obrigatória, registrar o resultado real e continuar a validação do HairDay antes da entrega final.
 
-- O App.css ainda utilizava o layout antigo.
-- O filtro de data aparecia abaixo do título.
-- As alterações anteriores não estavam presentes no arquivo.
+---
 
-Correções:
+**HairDay — Projeto 04 | Single Page Application (SPA)**
 
-- Reorganização do cabeçalho com CSS Grid.
-- Posicionamento do filtro à direita no desktop.
-- Alinhamento do título e descrição à esquerda.
-- Aplicação das variáveis de cores do HairDay.
-- Adaptação para tablets e celulares.
-- Preservação dos componentes e funcionalidades.
-
-Validação:
-
-- Compilação TypeScript.
-- Build de produção.
-- Verificação visual em desktop e mobile.
-
-### Próxima etapa
-
-Adicionar a identidade visual e a logo HairDay
-na parte superior da Sidebar.
+**Documentação consolidada em 12/11/2026.**
